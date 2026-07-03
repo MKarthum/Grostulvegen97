@@ -58,6 +58,13 @@ export interface WaterInstructions {
   videoIds: string[];
 }
 
+export interface TvInstructions {
+  title: string;
+  intro: string;
+  steps: string[];
+  streamingNote: string;
+}
+
 export interface LinenInfo {
   title: string;
   intro: string;
@@ -178,6 +185,7 @@ export interface Translation {
   stayTitle: string;
   stayEyebrow: string;
   utilitiesEyebrow: string;
+  entertainmentEyebrow: string;
   packingListEyebrow: string;
   houseRulesEyebrow: string;
   localGuideEyebrow: string;
@@ -200,6 +208,7 @@ export interface Translation {
   wifi: WifiInfo;
   door: DoorInstructions;
   water: WaterInstructions;
+  tv: TvInstructions;
   linen: LinenInfo;
   rules: HouseRules;
   checklist: DepartureChecklist;

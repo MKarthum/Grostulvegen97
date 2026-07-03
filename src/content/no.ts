@@ -62,6 +62,7 @@ export const no: Translation = {
   stayTitle: "Under oppholdet",
   stayEyebrow: "Praktisk informasjon",
   utilitiesEyebrow: "Vann",
+  entertainmentEyebrow: "Underholdning",
   packingListEyebrow: "Pakkeliste",
   houseRulesEyebrow: "Husregler",
   localGuideEyebrow: "Lokal guide",
@@ -150,6 +151,21 @@ export const no: Translation = {
       "Vri spaken for å åpne vannet. Steng vannet ved å vri motsatt vei.",
     ],
     videoIds: ["water-on", "water-off"],
+  },
+  tv: {
+    title: "TV og strømming",
+    intro: "For å se vanlige TV-kanaler:",
+    steps: [
+      "Slå på TV-en.",
+      "Naviger mot venstre for å åpne menyen.",
+      "Velg «Tilkoblede enheter».",
+      "Gå mot høyre og velg «HDMI2».",
+      "Apple TV starter automatisk.",
+      "Velg profilen «Mathias».",
+      "Åpne «Telia Play» for å se vanlige TV-kanaler.",
+    ],
+    streamingNote:
+      "Apple TV har også tilgang til flere strømmetjenester. Dere kan bruke dem som allerede er tilgjengelige, logge inn med egne kontoer, eller strømme fra mobil til Apple TV. Husk å logge ut av egne tjenester før avreise.",
   },
   linen: {
     title: "Sengetøy og håndklær",

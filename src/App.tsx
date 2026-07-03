@@ -8,6 +8,7 @@ import BeforeArrivalCard from "./components/BeforeArrivalCard";
 import WifiCard from "./components/WifiCard";
 import DoorInstructionsCard from "./components/DoorInstructionsCard";
 import WaterInstructionsCard from "./components/WaterInstructionsCard";
+import TvInstructionsCard from "./components/TvInstructionsCard";
 import RulesAndLinen from "./components/RulesAndLinen";
 import InteractiveChecklist from "./components/InteractiveChecklist";
 import HikesAndTrips from "./components/HikesAndTrips";
@@ -245,6 +246,7 @@ export default function App() {
               openInYoutubeLabel={t.openInYoutubeLabel}
               videoComingSoonLabel={t.videoComingSoonLabel}
             />
+            <TvInstructionsCard tv={t.tv} entertainmentEyebrow={t.entertainmentEyebrow} />
             <RulesAndLinen
               linen={t.linen}
               rules={t.rules}

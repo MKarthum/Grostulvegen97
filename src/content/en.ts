@@ -62,6 +62,7 @@ export const en: Translation = {
   stayTitle: "During your stay",
   stayEyebrow: "Practical information",
   utilitiesEyebrow: "Water",
+  entertainmentEyebrow: "Entertainment",
   packingListEyebrow: "Packing list",
   houseRulesEyebrow: "House rules",
   localGuideEyebrow: "Local guide",
@@ -150,6 +151,21 @@ export const en: Translation = {
       "Turn the lever to turn the water on. Turn it the other way to turn it off.",
     ],
     videoIds: ["water-on", "water-off"],
+  },
+  tv: {
+    title: "TV and streaming",
+    intro: "To watch regular TV channels:",
+    steps: [
+      "Turn on the TV.",
+      "Navigate left to open the menu.",
+      "Select “Tilkoblede enheter” / “Connected devices”.",
+      "Navigate right and select “HDMI2”.",
+      "Apple TV will start automatically.",
+      "Choose the “Mathias” profile.",
+      "Open “Telia Play” to watch regular TV channels.",
+    ],
+    streamingNote:
+      "Apple TV also has access to several streaming services. You can use the services already available, sign in with your own accounts, or stream from your phone to Apple TV. Please remember to sign out of any personal accounts before you leave.",
   },
   linen: {
     title: "Bed linen and towels",
