@@ -303,6 +303,13 @@ export const no: Translation = {
       description: "Slik stenger du vanntilførselen til vaskemaskinen etter bruk. Viktig for å unngå lekkasjer.",
       url: "https://youtube.com/shorts/prVTHhEduIc?feature=share",
     },
+    {
+      id: "fireplace",
+      title: "Slik bruker du peisen",
+      description:
+        "Viser hvordan dere åpner spjeldet før dere fyrer opp, og hvordan dere lukker opp og igjen luken samt justerer spjeldet mens peisen brenner. Spjeldet kan for eksempel stå halvveis åpent når det er god varme i peisen, og skal først lukkes helt når peisen er sluknet og kald igjen. Bruk kun ved og opptenningsbriketter i peisen, aldri papp, papir eller annet søppel, det er skadelig for pipen.",
+      url: "https://youtube.com/shorts/kW1oQm3UYLg?feature=share",
+    },
   ],
   contact: {
     title: "Kontakt og nødnumre",

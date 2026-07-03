@@ -302,6 +302,13 @@ export const en: Translation = {
       description: "How to shut off the water supply to the washing machine after use. Important to avoid leaks.",
       url: "https://youtube.com/shorts/prVTHhEduIc?feature=share",
     },
+    {
+      id: "fireplace",
+      title: "How to use the fireplace",
+      description:
+        "Shows how to open the damper before lighting the fire, and how to open and close the fireplace door and adjust the damper while it's burning. The damper can, for example, be left half open once the fire is giving off good heat, and should only be closed fully once the fire has gone out and cooled down. Only burn firewood and fire-starter briquettes in the fireplace, never cardboard, paper, or other rubbish, it damages the chimney.",
+      url: "https://youtube.com/shorts/kW1oQm3UYLg?feature=share",
+    },
   ],
   contact: {
     title: "Contact and emergency numbers",
