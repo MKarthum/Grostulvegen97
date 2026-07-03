@@ -250,34 +250,10 @@ export const no: Translation = {
   visitWebsiteLabel: "Besøk nettside",
   videos: [
     {
-      id: "lock-door-inside",
-      title: "Slik låser du døren innenfra",
-      description: "Håndtaket må løftes helt opp før du vrir om låsen, ellers går den ikke i lås.",
-      url: "https://youtube.com/shorts/ifUZzJuAolw?feature=share",
-    },
-    {
-      id: "lock-door-outside",
-      title: "Slik låser du døren utenfra",
-      description: "Håndtaket må løftes helt opp før du låser med nøkkelen, ellers går den ikke i lås.",
-      url: "https://youtube.com/shorts/sTrSQ23qYX0?feature=share",
-    },
-    {
       id: "key-box",
       title: "Slik bruker du nøkkelboksen",
       description: "Åpne panelet, tast inn koden dere har fått på SMS, og bruk åpneren til venstre i boksen. Husk å sette koden tilbake til 0000 når den ikke er i bruk.",
       url: "https://youtube.com/shorts/d6k2GnxmDZs?feature=share",
-    },
-    {
-      id: "washing-machine-water-on",
-      title: "Åpne vannet til vaskemaskinen",
-      description: "Slik åpner du vanntilførselen til vaskemaskinen før bruk.",
-      url: "https://youtube.com/shorts/qXgCGHjRoBM?feature=share",
-    },
-    {
-      id: "washing-machine-water-off",
-      title: "Stenge vannet til vaskemaskinen",
-      description: "Slik stenger du vanntilførselen til vaskemaskinen etter bruk. Viktig for å unngå lekkasjer.",
-      url: "https://youtube.com/shorts/prVTHhEduIc?feature=share",
     },
     {
       id: "water-on",
@@ -290,6 +266,30 @@ export const no: Translation = {
       title: "Slik stenger du vannet til hytta",
       description: "Utføres når dere forlater hytta. Vannskapet finner dere innerst i boden til høyre for hoveddøren. Ingen spesialnøkkel trengs, bare noe å vri med, for eksempel en nøkkel eller skrutrekker.",
       url: "https://youtube.com/shorts/RuXYISfkhIo?feature=share",
+    },
+    {
+      id: "lock-door-inside",
+      title: "Slik låser du døren innenfra",
+      description: "Håndtaket må løftes helt opp før du vrir om låsen, ellers går den ikke i lås.",
+      url: "https://youtube.com/shorts/ifUZzJuAolw?feature=share",
+    },
+    {
+      id: "lock-door-outside",
+      title: "Slik låser du døren utenfra",
+      description: "Håndtaket må løftes helt opp før du låser med nøkkelen, ellers går den ikke i lås.",
+      url: "https://youtube.com/shorts/sTrSQ23qYX0?feature=share",
+    },
+    {
+      id: "washing-machine-water-on",
+      title: "Åpne vannet til vaskemaskinen",
+      description: "Slik åpner du vanntilførselen til vaskemaskinen før bruk.",
+      url: "https://youtube.com/shorts/qXgCGHjRoBM?feature=share",
+    },
+    {
+      id: "washing-machine-water-off",
+      title: "Stenge vannet til vaskemaskinen",
+      description: "Slik stenger du vanntilførselen til vaskemaskinen etter bruk. Viktig for å unngå lekkasjer.",
+      url: "https://youtube.com/shorts/prVTHhEduIc?feature=share",
     },
   ],
   contact: {

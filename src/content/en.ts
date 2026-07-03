@@ -250,34 +250,10 @@ export const en: Translation = {
   visitWebsiteLabel: "Visit website",
   videos: [
     {
-      id: "lock-door-inside",
-      title: "How to lock the door from the inside",
-      description: "The handle must be lifted all the way up before you turn the lock, otherwise it won't engage.",
-      url: "https://youtube.com/shorts/ifUZzJuAolw?feature=share",
-    },
-    {
-      id: "lock-door-outside",
-      title: "How to lock the door from the outside",
-      description: "The handle must be lifted all the way up before you lock with the key, otherwise it won't engage.",
-      url: "https://youtube.com/shorts/sTrSQ23qYX0?feature=share",
-    },
-    {
       id: "key-box",
       title: "How to use the key box",
       description: "Open the panel, enter the code you received by SMS, and use the opener on the left side of the box. Remember to reset the code to 0000 when it's not in use.",
       url: "https://youtube.com/shorts/d6k2GnxmDZs?feature=share",
-    },
-    {
-      id: "washing-machine-water-on",
-      title: "Turning on the water for the washing machine",
-      description: "How to open the water supply to the washing machine before use.",
-      url: "https://youtube.com/shorts/qXgCGHjRoBM?feature=share",
-    },
-    {
-      id: "washing-machine-water-off",
-      title: "Turning off the water for the washing machine",
-      description: "How to shut off the water supply to the washing machine after use. Important to avoid leaks.",
-      url: "https://youtube.com/shorts/prVTHhEduIc?feature=share",
     },
     {
       id: "water-on",
@@ -290,6 +266,30 @@ export const en: Translation = {
       title: "How to turn off the water for the cabin",
       description: "Done when you leave the cabin. The water cabinet is at the far end of the shed to the right of the front door. No special key is needed, just something to turn it with, such as any key or a screwdriver.",
       url: "https://youtube.com/shorts/RuXYISfkhIo?feature=share",
+    },
+    {
+      id: "lock-door-inside",
+      title: "How to lock the door from the inside",
+      description: "The handle must be lifted all the way up before you turn the lock, otherwise it won't engage.",
+      url: "https://youtube.com/shorts/ifUZzJuAolw?feature=share",
+    },
+    {
+      id: "lock-door-outside",
+      title: "How to lock the door from the outside",
+      description: "The handle must be lifted all the way up before you lock with the key, otherwise it won't engage.",
+      url: "https://youtube.com/shorts/sTrSQ23qYX0?feature=share",
+    },
+    {
+      id: "washing-machine-water-on",
+      title: "Turning on the water for the washing machine",
+      description: "How to open the water supply to the washing machine before use.",
+      url: "https://youtube.com/shorts/qXgCGHjRoBM?feature=share",
+    },
+    {
+      id: "washing-machine-water-off",
+      title: "Turning off the water for the washing machine",
+      description: "How to shut off the water supply to the washing machine after use. Important to avoid leaks.",
+      url: "https://youtube.com/shorts/prVTHhEduIc?feature=share",
     },
   ],
   contact: {
