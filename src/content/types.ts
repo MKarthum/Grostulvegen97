@@ -47,11 +47,15 @@ export interface DoorInstructions {
   handleReminder: string;
   warningTitle: string;
   warningText: string;
+  // ids into `videos[]` for the matching instructional video(s) shown
+  // alongside these written steps.
+  videoIds: string[];
 }
 
 export interface WaterInstructions {
   title: string;
   steps: string[];
+  videoIds: string[];
 }
 
 export interface LinenInfo {
@@ -179,13 +183,18 @@ export interface Translation {
   houseRulesEyebrow: string;
   localGuideEyebrow: string;
   experiencesTitle: string;
+  stayVideosTitle: string;
+  stayVideosIntro: string;
 
   departureEyebrow: string;
+  departureVideosTitle: string;
+  departureVideosIntro: string;
 
   videosTitle: string;
   videosEyebrow: string;
   videosIntro: string;
   watchVideoLabel: string;
+  openInYoutubeLabel: string;
   videoComingSoonLabel: string;
 
   contactTitle: string;
@@ -208,6 +217,7 @@ export interface Translation {
   hikesMapNote: string;
   tripsSource: string;
   visitWebsiteLabel: string;
+  hikesRegionLabel: string;
   contact: ContactEmergency;
   videos: VideoGuide[];
 

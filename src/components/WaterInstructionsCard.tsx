@@ -1,13 +1,25 @@
 import React from "react";
 import { Droplet } from "lucide-react";
-import { WaterInstructions } from "../content/types";
+import { WaterInstructions, VideoGuide } from "../content/types";
+import VideoCard from "./VideoCard";
 
 interface WaterInstructionsCardProps {
   water: WaterInstructions;
   utilitiesEyebrow: string;
+  videos: VideoGuide[];
+  watchVideoLabel: string;
+  openInYoutubeLabel: string;
+  videoComingSoonLabel: string;
 }
 
-export default function WaterInstructionsCard({ water, utilitiesEyebrow }: WaterInstructionsCardProps) {
+export default function WaterInstructionsCard({
+  water,
+  utilitiesEyebrow,
+  videos,
+  watchVideoLabel,
+  openInYoutubeLabel,
+  videoComingSoonLabel,
+}: WaterInstructionsCardProps) {
   return (
     <div id="water-instructions-card" className="bg-white/3 border border-white/8 backdrop-blur-md rounded-3xl p-6 sm:p-8 text-text-light shadow-xl relative overflow-hidden flex flex-col justify-between">
       <div>
@@ -33,6 +45,20 @@ export default function WaterInstructionsCard({ water, utilitiesEyebrow }: Water
             </div>
           ))}
         </div>
+
+        {videos.length > 0 && (
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {videos.map((video) => (
+              <VideoCard
+                key={video.id}
+                video={video}
+                watchVideoLabel={watchVideoLabel}
+                openInYoutubeLabel={openInYoutubeLabel}
+                videoComingSoonLabel={videoComingSoonLabel}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

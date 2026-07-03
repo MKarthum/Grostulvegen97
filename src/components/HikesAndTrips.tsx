@@ -13,6 +13,7 @@ interface HikesAndTripsProps {
   experiencesTitle: string;
   localGuideEyebrow: string;
   visitWebsiteLabel: string;
+  hikesRegionLabel: string;
 }
 
 const badgeColors: Record<HikeDifficulty, string> = {
@@ -34,6 +35,7 @@ export default function HikesAndTrips({
   experiencesTitle,
   localGuideEyebrow,
   visitWebsiteLabel,
+  hikesRegionLabel,
 }: HikesAndTripsProps) {
   const [activeTab, setActiveTab] = useState<"hikes" | "trips">("hikes");
 
@@ -117,7 +119,7 @@ export default function HikesAndTrips({
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   ) : (
-                    <span className="text-xs text-text-dim font-mono">Lifjell</span>
+                    <span className="text-xs text-text-dim font-mono">{hikesRegionLabel}</span>
                   )}
                 </div>
               </div>

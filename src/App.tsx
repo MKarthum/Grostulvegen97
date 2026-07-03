@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { translations } from "./content";
-import { Translation } from "./content/types";
+import { Translation, VideoGuide } from "./content/types";
 
 // Import custom components
 import CabinStats from "./components/CabinStats";
@@ -32,6 +32,17 @@ export default function App() {
   const [lang, setLang] = useState<"no" | "en">("no");
   const t: Translation = translations[lang];
 
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = lang === "no" ? "Grostulvegen 97 – hytteguide" : "Grostulvegen 97 – cabin guide";
+  }, [lang]);
+
+  // Look up video guides by id so instruction sections can embed the
+  // matching video without duplicating its title/description anywhere.
+  const findVideos = (ids: string[]): VideoGuide[] =>
+    ids.map((id) => t.videos.find((video) => video.id === id)).filter((v): v is VideoGuide => Boolean(v));
+  const findVideo = (id: string): VideoGuide | undefined => t.videos.find((video) => video.id === id);
+
   // Quick navigation items with translated labels
   const navItems = [
     { id: "om-hytta", icon: <Home className="w-4 h-4" />, label: t.nav.about },
@@ -61,7 +72,7 @@ export default function App() {
             </div>
             <div>
               <h1 id="header-title" className="font-display font-bold text-lg text-white tracking-tight leading-none">
-                Grostulvegen 97
+                {t.heroTitle}
               </h1>
               <span className="text-[10px] text-text-dim font-mono tracking-widest uppercase block mt-1.5">
                 {t.headerTagline}
@@ -193,12 +204,31 @@ export default function App() {
               networkLabel={t.networkLabel}
               securityLabel={t.securityLabel}
               passwordLabel={t.passwordLabel}
+              keyBoxVideo={findVideo("key-box")}
+              watchVideoLabel={t.watchVideoLabel}
+              openInYoutubeLabel={t.openInYoutubeLabel}
+              videoComingSoonLabel={t.videoComingSoonLabel}
             />
-            <DoorInstructionsCard door={t.door} accessEyebrow={t.accessEyebrow} />
+            <DoorInstructionsCard
+              door={t.door}
+              accessEyebrow={t.accessEyebrow}
+              videos={findVideos(t.door.videoIds)}
+              watchVideoLabel={t.watchVideoLabel}
+              openInYoutubeLabel={t.openInYoutubeLabel}
+              videoComingSoonLabel={t.videoComingSoonLabel}
+            />
+            <WaterInstructionsCard
+              water={t.water}
+              utilitiesEyebrow={t.utilitiesEyebrow}
+              videos={findVideos(t.water.videoIds)}
+              watchVideoLabel={t.watchVideoLabel}
+              openInYoutubeLabel={t.openInYoutubeLabel}
+              videoComingSoonLabel={t.videoComingSoonLabel}
+            />
           </div>
         </section>
 
-        {/* Section: During the stay (water, house rules, linen, hikes & trips) */}
+        {/* Section: During the stay (fireplace/washing machine videos, house rules, linen, hikes & trips) */}
         <section id="opphold" className="scroll-mt-36 border-t border-white/5 pt-12">
           <div className="mb-6">
             <span className="text-cabin-accent font-mono text-xs uppercase tracking-widest font-bold block mb-1">
@@ -209,7 +239,14 @@ export default function App() {
             </h2>
           </div>
           <div className="space-y-8">
-            <WaterInstructionsCard water={t.water} utilitiesEyebrow={t.utilitiesEyebrow} />
+            <VideoGuides
+              videos={findVideos(["fireplace", "washing-machine-water-on", "washing-machine-water-off"])}
+              title={t.stayVideosTitle}
+              intro={t.stayVideosIntro}
+              watchVideoLabel={t.watchVideoLabel}
+              openInYoutubeLabel={t.openInYoutubeLabel}
+              videoComingSoonLabel={t.videoComingSoonLabel}
+            />
             <RulesAndLinen
               linen={t.linen}
               rules={t.rules}
@@ -227,13 +264,24 @@ export default function App() {
               experiencesTitle={t.experiencesTitle}
               localGuideEyebrow={t.localGuideEyebrow}
               visitWebsiteLabel={t.visitWebsiteLabel}
+              hikesRegionLabel={t.hikesRegionLabel}
             />
           </div>
         </section>
 
-        {/* Section: Departure checklist */}
+        {/* Section: Departure checklist + the videos most relevant when leaving */}
         <section id="avreise" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <InteractiveChecklist checklist={t.checklist} departureEyebrow={t.departureEyebrow} />
+          <div className="space-y-8">
+            <InteractiveChecklist checklist={t.checklist} departureEyebrow={t.departureEyebrow} />
+            <VideoGuides
+              videos={findVideos(["water-off", "lock-door-outside", "washing-machine-water-off"])}
+              title={t.departureVideosTitle}
+              intro={t.departureVideosIntro}
+              watchVideoLabel={t.watchVideoLabel}
+              openInYoutubeLabel={t.openInYoutubeLabel}
+              videoComingSoonLabel={t.videoComingSoonLabel}
+            />
+          </div>
         </section>
 
         {/* Section: Video guides */}
@@ -243,6 +291,7 @@ export default function App() {
             title={t.videosTitle}
             intro={t.videosIntro}
             watchVideoLabel={t.watchVideoLabel}
+            openInYoutubeLabel={t.openInYoutubeLabel}
             videoComingSoonLabel={t.videoComingSoonLabel}
           />
         </section>
@@ -262,8 +311,8 @@ export default function App() {
       {/* Elegant Footer */}
       <footer className="mt-24 border-t border-white/5 bg-white/2 py-12 px-4 sm:px-6 lg:px-8 text-center text-text-dim text-xs font-mono">
         <div className="max-w-7xl mx-auto space-y-2">
-          <p className="text-cabin-accent font-semibold font-sans">Grostulvegen 97, 3804 Bø i Telemark</p>
-          <p>© 2026 Grostulvegen 97 — {t.footerTagline}</p>
+          <p className="text-cabin-accent font-semibold font-sans">{t.beforeArrival.address.value}</p>
+          <p>© 2026 {t.heroTitle} — {t.footerTagline}</p>
         </div>
       </footer>
     </div>

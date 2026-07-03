@@ -12,9 +12,9 @@
 import { Translation } from "./types";
 
 export const en: Translation = {
-  headerTagline: "Cabin Guide",
+  headerTagline: "Cabin guide",
   heroTitle: "Grostulvegen 97",
-  heroSubtitle: "Cabin Guide & Practical Info",
+  heroSubtitle: "Practical information for your stay",
   heroLocation: "Lifjell, Bø in Telemark, Norway",
   welcomeMessage: "We can't wait to welcome you to the cabin!",
   welcomeEyebrow: "Welcome",
@@ -67,13 +67,18 @@ export const en: Translation = {
   houseRulesEyebrow: "House rules",
   localGuideEyebrow: "Local guide",
   experiencesTitle: "Hikes and experiences",
+  stayVideosTitle: "Fireplace and washing machine",
+  stayVideosIntro: "Practical video help for things you'll need during your stay.",
 
   departureEyebrow: "Departure",
+  departureVideosTitle: "Departure videos",
+  departureVideosIntro: "Watch these before you leave to make sure everything is in order.",
 
   videosTitle: "Video instructions",
   videosEyebrow: "Watch and learn",
   videosIntro: "Short videos showing practical tasks at the cabin.",
   watchVideoLabel: "Watch video",
+  openInYoutubeLabel: "Open in YouTube",
   videoComingSoonLabel: "Coming soon",
 
   contactTitle: "Contact and emergency numbers",
@@ -141,6 +146,7 @@ export const en: Translation = {
     warningTitle: "Note!",
     warningText:
       "If the door is not locked by lifting the handle all the way up first, the lock will not engage and the cabin will remain unlocked.",
+    videoIds: ["lock-door-inside", "lock-door-outside"],
   },
   water: {
     title: "Water, turning it on and off",
@@ -149,6 +155,7 @@ export const en: Translation = {
       "Lift the lid inside the cabinet. You will find a blue lever.",
       "Turn the lever to turn the water on. Turn it the other way to turn it off.",
     ],
+    videoIds: ["water-on"],
   },
   linen: {
     title: "Bed linen and towels",
@@ -259,23 +266,24 @@ export const en: Translation = {
   hikesMapNote: "There's a hiking map of Lifjell in the cabin's living room, showing many more route options in the area.",
   tripsSource: "Sources: sommarland.no, bomuseum.no, our own Airbnb listing for the cabin.",
   visitWebsiteLabel: "Visit website",
+  hikesRegionLabel: "Lifjell",
   videos: [
     {
       id: "key-box",
       title: "How to use the key box",
-      description: "Open the panel, enter the code you received by SMS, and use the opener on the left side of the box. Remember to reset the code to 0000 when it's not in use.",
+      description: "Open the panel, enter the code you received by SMS, and use the opener on the left side of the box. Reset the dials to 0000 after use.",
       url: "https://youtube.com/shorts/d6k2GnxmDZs?feature=share",
     },
     {
       id: "water-on",
       title: "How to turn on the water for the cabin",
-      description: "Done when you arrive. The water cabinet is at the far end of the shed to the right of the front door. No special key is needed, just something to turn it with, such as any key or a screwdriver.",
+      description: "Done when you arrive. The water cabinet is at the far end of the shed to the right of the front door. No special key is needed. Use something to turn it with, such as a key or screwdriver.",
       url: "https://youtube.com/shorts/gLBb66djzb4?feature=share",
     },
     {
       id: "water-off",
       title: "How to turn off the water for the cabin",
-      description: "Done when you leave the cabin. The water cabinet is at the far end of the shed to the right of the front door. No special key is needed, just something to turn it with, such as any key or a screwdriver.",
+      description: "Done when you leave the cabin. The water cabinet is at the far end of the shed to the right of the front door. No special key is needed. Use something to turn it with, such as a key or screwdriver.",
       url: "https://youtube.com/shorts/RuXYISfkhIo?feature=share",
     },
     {
@@ -306,7 +314,7 @@ export const en: Translation = {
       id: "fireplace",
       title: "How to use the fireplace",
       description:
-        "Shows how to open the damper before lighting the fire, and how to open and close the fireplace door and adjust the damper while it's burning. The damper can, for example, be left half open once the fire is giving off good heat, and should only be closed fully once the fire has gone out and cooled down. Only burn firewood and fire-starter briquettes in the fireplace, never cardboard, paper, or other rubbish, it damages the chimney.",
+        "Shows how to open the damper before lighting the fire, use the door, and adjust the airflow while the fire is burning. The damper can be partly open once the fire is giving off good heat, but should only be closed fully when the fire is out and cold. Only burn firewood and fire-starter briquettes, never cardboard, paper, or other rubbish.",
       url: "https://youtube.com/shorts/kW1oQm3UYLg?feature=share",
     },
   ],

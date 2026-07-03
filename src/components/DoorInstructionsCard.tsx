@@ -1,13 +1,25 @@
 import React from "react";
 import { Lock, ArrowUp, ShieldAlert } from "lucide-react";
-import { DoorInstructions } from "../content/types";
+import { DoorInstructions, VideoGuide } from "../content/types";
+import VideoCard from "./VideoCard";
 
 interface DoorInstructionsCardProps {
   door: DoorInstructions;
   accessEyebrow: string;
+  videos: VideoGuide[];
+  watchVideoLabel: string;
+  openInYoutubeLabel: string;
+  videoComingSoonLabel: string;
 }
 
-export default function DoorInstructionsCard({ door, accessEyebrow }: DoorInstructionsCardProps) {
+export default function DoorInstructionsCard({
+  door,
+  accessEyebrow,
+  videos,
+  watchVideoLabel,
+  openInYoutubeLabel,
+  videoComingSoonLabel,
+}: DoorInstructionsCardProps) {
   return (
     <div id="door-instructions-card" className="bg-white/3 border border-white/8 backdrop-blur-md rounded-3xl p-6 sm:p-8 text-text-light shadow-xl relative overflow-hidden flex flex-col justify-between">
       <div>
@@ -46,6 +58,20 @@ export default function DoorInstructionsCard({ door, accessEyebrow }: DoorInstru
             );
           })}
         </div>
+
+        {videos.length > 0 && (
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {videos.map((video) => (
+              <VideoCard
+                key={video.id}
+                video={video}
+                watchVideoLabel={watchVideoLabel}
+                openInYoutubeLabel={openInYoutubeLabel}
+                videoComingSoonLabel={videoComingSoonLabel}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="mt-6 flex gap-3 p-4 bg-cabin-gold/5 border border-cabin-gold/20 rounded-2xl text-text-light text-xs sm:text-sm leading-relaxed">

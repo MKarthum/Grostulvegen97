@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Wifi, Copy, Check, Key } from "lucide-react";
-import { WifiInfo } from "../content/types";
+import { WifiInfo, VideoGuide } from "../content/types";
+import VideoCard from "./VideoCard";
 
 interface WifiCardProps {
   wifi: WifiInfo;
@@ -11,6 +12,10 @@ interface WifiCardProps {
   networkLabel: string;
   securityLabel: string;
   passwordLabel: string;
+  keyBoxVideo?: VideoGuide;
+  watchVideoLabel: string;
+  openInYoutubeLabel: string;
+  videoComingSoonLabel: string;
 }
 
 export default function WifiCard({
@@ -22,6 +27,10 @@ export default function WifiCard({
   networkLabel,
   securityLabel,
   passwordLabel,
+  keyBoxVideo,
+  watchVideoLabel,
+  openInYoutubeLabel,
+  videoComingSoonLabel,
 }: WifiCardProps) {
   const [copiedNetwork, setCopiedNetwork] = useState(false);
 
@@ -91,6 +100,17 @@ export default function WifiCard({
         <Key className="w-5 h-5 text-cabin-accent shrink-0 mt-0.5" />
         <p className="font-medium">{wifi.keyBoxInstructions}</p>
       </div>
+
+      {keyBoxVideo && (
+        <div className="mt-4">
+          <VideoCard
+            video={keyBoxVideo}
+            watchVideoLabel={watchVideoLabel}
+            openInYoutubeLabel={openInYoutubeLabel}
+            videoComingSoonLabel={videoComingSoonLabel}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -12,9 +12,9 @@
 import { Translation } from "./types";
 
 export const no: Translation = {
-  headerTagline: "Gjesteguide",
+  headerTagline: "Hytteguide",
   heroTitle: "Grostulvegen 97",
-  heroSubtitle: "Hytteinfo & Gjort enkelt",
+  heroSubtitle: "Praktisk informasjon for oppholdet",
   heroLocation: "Lifjell, Bø i Telemark, Norge",
   welcomeMessage: "Vi gleder oss til å ønske dere velkommen til hytta!",
   welcomeEyebrow: "Velkommen",
@@ -55,7 +55,7 @@ export const no: Translation = {
   arrivalEyebrow: "Når dere kommer frem",
   accessEyebrow: "Adgang",
   connectivityEyebrow: "Nett",
-  wifiKeyTitle: "Wifi og nøkkel",
+  wifiKeyTitle: "Wi-Fi og nøkkel",
   networkLabel: "Nettverk",
   securityLabel: "Sikkerhet",
   passwordLabel: "Passord",
@@ -67,13 +67,18 @@ export const no: Translation = {
   houseRulesEyebrow: "Husregler",
   localGuideEyebrow: "Lokal guide",
   experiencesTitle: "Turer og opplevelser",
+  stayVideosTitle: "Peis og vaskemaskin",
+  stayVideosIntro: "Praktisk videohjelp til det dere trenger i løpet av oppholdet.",
 
   departureEyebrow: "Avreise",
+  departureVideosTitle: "Videoer for avreise",
+  departureVideosIntro: "Se disse før dere drar, så er dere sikre på at alt er i orden.",
 
   videosTitle: "Videoinstruksjoner",
   videosEyebrow: "Se og lær",
   videosIntro: "Korte videoer som viser praktiske gjøremål på hytta.",
   watchVideoLabel: "Se video",
+  openInYoutubeLabel: "Åpne i YouTube",
   videoComingSoonLabel: "Kommer snart",
 
   contactTitle: "Kontakt og nødnumre",
@@ -141,6 +146,7 @@ export const no: Translation = {
     warningTitle: "OBS!",
     warningText:
       "Hvis døren ikke låses ved å løfte håndtaket helt opp først, går ikke låsen i lås, og hytta blir stående ulåst.",
+    videoIds: ["lock-door-inside", "lock-door-outside"],
   },
   water: {
     title: "Vann, åpne og stenge",
@@ -149,11 +155,12 @@ export const no: Translation = {
       "Løft opp lokket inne i skapet. Der finner dere en blå spak.",
       "Vri spaken for å åpne vannet. Steng vannet ved å vri motsatt vei.",
     ],
+    videoIds: ["water-on"],
   },
   linen: {
     title: "Sengetøy og håndklær",
     intro: "Husk å pakke med følgende:",
-    items: ["Laken", "Dynetrekk", "Putetrekk", "Badehåndkle", "Tørkehåndkle til badet"],
+    items: ["Laken", "Dynetrekk", "Putetrekk", "Badehåndkle", "Håndkle til badet"],
     warning: "Sengetøy og håndklær følger ikke med hytta, dette må dere ta med selv.",
   },
   rules: {
@@ -260,23 +267,24 @@ export const no: Translation = {
   hikesMapNote: "Det henger et turkart over Lifjell i stuen på hytta, med mange flere turforslag i området.",
   tripsSource: "Kilder: sommarland.no, bomuseum.no, egen Airbnb-annonse for hytta.",
   visitWebsiteLabel: "Besøk nettside",
+  hikesRegionLabel: "Lifjell",
   videos: [
     {
       id: "key-box",
       title: "Slik bruker du nøkkelboksen",
-      description: "Åpne panelet, tast inn koden dere har fått på SMS, og bruk åpneren til venstre i boksen. Husk å sette koden tilbake til 0000 når den ikke er i bruk.",
+      description: "Åpne panelet, tast inn koden dere har fått på SMS, og bruk åpneren til venstre i boksen. Still tallhjulene tilbake til 0000 etter bruk.",
       url: "https://youtube.com/shorts/d6k2GnxmDZs?feature=share",
     },
     {
       id: "water-on",
       title: "Slik åpner du vannet til hytta",
-      description: "Utføres ved ankomst. Vannskapet finner dere innerst i boden til høyre for hoveddøren. Ingen spesialnøkkel trengs, bare noe å vri med, for eksempel en nøkkel eller skrutrekker.",
+      description: "Utføres ved ankomst. Vannskapet finner dere innerst i boden til høyre for hoveddøren. Ingen spesialnøkkel trengs. Bruk noe å vri med, for eksempel en nøkkel eller skrutrekker.",
       url: "https://youtube.com/shorts/gLBb66djzb4?feature=share",
     },
     {
       id: "water-off",
       title: "Slik stenger du vannet til hytta",
-      description: "Utføres når dere forlater hytta. Vannskapet finner dere innerst i boden til høyre for hoveddøren. Ingen spesialnøkkel trengs, bare noe å vri med, for eksempel en nøkkel eller skrutrekker.",
+      description: "Utføres når dere forlater hytta. Vannskapet finner dere innerst i boden til høyre for hoveddøren. Ingen spesialnøkkel trengs. Bruk noe å vri med, for eksempel en nøkkel eller skrutrekker.",
       url: "https://youtube.com/shorts/RuXYISfkhIo?feature=share",
     },
     {
@@ -307,7 +315,7 @@ export const no: Translation = {
       id: "fireplace",
       title: "Slik bruker du peisen",
       description:
-        "Viser hvordan dere åpner spjeldet før dere fyrer opp, og hvordan dere lukker opp og igjen luken samt justerer spjeldet mens peisen brenner. Spjeldet kan for eksempel stå halvveis åpent når det er god varme i peisen, og skal først lukkes helt når peisen er sluknet og kald igjen. Bruk kun ved og opptenningsbriketter i peisen, aldri papp, papir eller annet søppel, det er skadelig for pipen.",
+        "Viser hvordan dere åpner spjeldet før opptenning, bruker luken og justerer trekk mens peisen brenner. Spjeldet kan stå delvis åpent når det er god varme, men skal først lukkes helt når peisen er sluknet og kald. Bruk kun ved og opptenningsbriketter, aldri papp, papir eller annet søppel.",
       url: "https://youtube.com/shorts/kW1oQm3UYLg?feature=share",
     },
   ],
