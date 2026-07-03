@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import { MapPin, Clock, Car, Copy, Check, Navigation, Calendar } from "lucide-react";
-import { BeforeArrivalInfo } from "../types";
+import { BeforeArrivalInfo } from "../content/types";
 
 interface BeforeArrivalCardProps {
   info: BeforeArrivalInfo;
   copiedLabel: string;
-  copyLabel: string;
+  copyAddressLabel: string;
+  navigateLabel: string;
+  destinationEyebrow: string;
 }
 
-export default function BeforeArrivalCard({ info, copiedLabel, copyLabel }: BeforeArrivalCardProps) {
+export default function BeforeArrivalCard({
+  info,
+  copiedLabel,
+  copyAddressLabel,
+  navigateLabel,
+  destinationEyebrow,
+}: BeforeArrivalCardProps) {
   const [copiedAddress, setCopiedAddress] = useState(false);
 
   const copyAddress = () => {
@@ -28,7 +36,7 @@ export default function BeforeArrivalCard({ info, copiedLabel, copyLabel }: Befo
         <div>
           <div className="flex items-start justify-between mb-6 border-b border-cabin-accent/15 pb-3">
             <div>
-              <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">Destination</span>
+              <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">{destinationEyebrow}</span>
               <h3 id="address-title" className="text-2xl font-bold tracking-tight text-cabin-accent font-display">
                 {info.address.label}
               </h3>
@@ -59,11 +67,11 @@ export default function BeforeArrivalCard({ info, copiedLabel, copyLabel }: Befo
             ) : (
               <>
                 <Copy className="w-4 h-4 text-cabin-accent" />
-                <span>{copyLabel} adresse</span>
+                <span>{copyAddressLabel}</span>
               </>
             )}
           </button>
-          
+
           <a
             id="navigate-maps-link"
             href={googleMapsUrl}
@@ -72,7 +80,7 @@ export default function BeforeArrivalCard({ info, copiedLabel, copyLabel }: Befo
             className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-cabin-green hover:bg-cabin-green/85 border border-cabin-accent/20 active:scale-95 font-semibold text-sm text-white shadow-md transition-all cursor-pointer"
           >
             <Navigation className="w-4 h-4 fill-white" />
-            <span>Naviger / Navigate</span>
+            <span>{navigateLabel}</span>
           </a>
         </div>
       </div>
@@ -89,7 +97,7 @@ export default function BeforeArrivalCard({ info, copiedLabel, copyLabel }: Befo
           </div>
           <div className="mt-4">
             <p className="text-2xl font-bold text-white font-display tracking-tight">{info.checkIn.value}</p>
-            <p className="text-xs text-text-dim mt-1">Innsjekkstidspunkt / Check-in</p>
+            <p className="text-xs text-text-dim mt-1">{info.checkIn.caption}</p>
           </div>
         </div>
 
@@ -103,7 +111,7 @@ export default function BeforeArrivalCard({ info, copiedLabel, copyLabel }: Befo
           </div>
           <div className="mt-4">
             <p className="text-2xl font-bold text-white font-display tracking-tight">{info.checkOut.value}</p>
-            <p className="text-xs text-text-dim mt-1">Utsjekkstidspunkt / Check-out</p>
+            <p className="text-xs text-text-dim mt-1">{info.checkOut.caption}</p>
           </div>
         </div>
 

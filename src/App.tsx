@@ -1,29 +1,29 @@
 import React, { useState } from "react";
-import { translations } from "./data";
-import { Translation } from "./types";
+import { translations } from "./content";
+import { Translation } from "./content/types";
 
 // Import custom components
 import CabinStats from "./components/CabinStats";
 import BeforeArrivalCard from "./components/BeforeArrivalCard";
 import WifiCard from "./components/WifiCard";
-import CabinInstructions from "./components/CabinInstructions";
+import DoorInstructionsCard from "./components/DoorInstructionsCard";
+import WaterInstructionsCard from "./components/WaterInstructionsCard";
 import RulesAndLinen from "./components/RulesAndLinen";
 import InteractiveChecklist from "./components/InteractiveChecklist";
 import HikesAndTrips from "./components/HikesAndTrips";
+import VideoGuides from "./components/VideoGuides";
 import ContactEmergencyCard from "./components/ContactEmergencyCard";
 
 // Icons for navigation bar
 import {
   Home,
   MapPin,
-  Wifi,
-  Lock,
-  FileText,
+  Key,
+  ClipboardList,
   CheckSquare,
-  Compass,
   PhoneCall,
-  Globe,
-  Compass as GuideIcon
+  PlayCircle,
+  Compass as GuideIcon,
 } from "lucide-react";
 
 export default function App() {
@@ -32,14 +32,13 @@ export default function App() {
 
   // Quick navigation items with translated labels
   const navItems = [
-    { id: "om-hytta", icon: <Home className="w-4 h-4" />, no: "Om hytta", en: "About" },
-    { id: "for-ankomst", icon: <MapPin className="w-4 h-4" />, no: "Før ankomst", en: "Arrival" },
-    { id: "wifi-nøkkel", icon: <Wifi className="w-4 h-4" />, no: "Wifi & Nøkkel", en: "Wifi & Key" },
-    { id: "instrukser", icon: <Lock className="w-4 h-4" />, no: "Instrukser", en: "Instructions" },
-    { id: "regler-sengetøy", icon: <FileText className="w-4 h-4" />, no: "Regler", en: "Rules" },
-    { id: "avreise-sjekkliste", icon: <CheckSquare className="w-4 h-4" />, no: "Sjekkliste", en: "Checklist" },
-    { id: "turer-opplevelser", icon: <Compass className="w-4 h-4" />, no: "Turer", en: "Hikes" },
-    { id: "kontakt-nød", icon: <PhoneCall className="w-4 h-4" />, no: "Kontakt", en: "Contact" },
+    { id: "om-hytta", icon: <Home className="w-4 h-4" />, label: t.nav.about },
+    { id: "for-ankomst", icon: <MapPin className="w-4 h-4" />, label: t.nav.beforeArrival },
+    { id: "ankomst", icon: <Key className="w-4 h-4" />, label: t.nav.arrival },
+    { id: "opphold", icon: <ClipboardList className="w-4 h-4" />, label: t.nav.stay },
+    { id: "avreise", icon: <CheckSquare className="w-4 h-4" />, label: t.nav.departure },
+    { id: "videoer", icon: <PlayCircle className="w-4 h-4" />, label: t.nav.videos },
+    { id: "kontakt", icon: <PhoneCall className="w-4 h-4" />, label: t.nav.contact },
   ];
 
   const handleScrollTo = (id: string) => {
@@ -63,7 +62,7 @@ export default function App() {
                 Grostulvegen 97
               </h1>
               <span className="text-[10px] text-text-dim font-mono tracking-widest uppercase block mt-1.5">
-                Gjesteguide / Cabin Guide
+                {t.headerTagline}
               </span>
             </div>
           </div>
@@ -130,7 +129,7 @@ export default function App() {
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 text-left animate-fade-in-up">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-cabin-accent/15 text-cabin-accent font-mono text-xs font-bold rounded-full border border-cabin-accent/25 backdrop-blur-md mb-4 animate-pulse">
             <MapPin className="w-3.5 h-3.5" />
-            Lifjell, Bø i Telemark, Norge
+            {t.heroLocation}
           </span>
           <h2 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white tracking-tight leading-tight mb-3">
             {t.heroTitle}
@@ -145,7 +144,7 @@ export default function App() {
       <div id="quick-jump-bar" className="bg-cabin-dark/85 backdrop-blur-md border-b border-white/8 py-3.5 overflow-x-auto sticky top-[69px] z-40 shadow-lg scrollbar-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 whitespace-nowrap">
           <span className="text-[10px] font-mono text-text-dim uppercase tracking-widest font-bold mr-2.5 hidden md:inline">
-            Hopp til:
+            {t.jumpToLabel}
           </span>
           {navItems.map((item) => (
             <button
@@ -155,7 +154,7 @@ export default function App() {
               className="flex items-center gap-1.5 px-4 py-2 bg-white/5 hover:bg-white/10 text-text-light hover:text-white rounded-xl text-xs font-semibold border border-white/10 hover:border-cabin-accent/25 shadow-sm transition-all cursor-pointer"
             >
               {item.icon}
-              <span>{lang === "no" ? item.no : item.en}</span>
+              <span>{item.label}</span>
             </button>
           ))}
         </div>
@@ -163,68 +162,112 @@ export default function App() {
 
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-16 flex-1 w-full animate-fade-in-up">
-        
-        {/* Seksjon 1: Om hytta */}
+
+        {/* Section: About the cabin */}
         <section id="om-hytta" className="scroll-mt-36">
-          <CabinStats stats={t.stats} title={t.aboutTitle} />
+          <CabinStats stats={t.stats} labels={t.statsLabels} title={t.aboutTitle} />
         </section>
 
-        {/* Seksjon 2: Før dere kommer */}
+        {/* Section: Before arrival (address, check-in/out, parking) */}
         <section id="for-ankomst" className="scroll-mt-36 border-t border-white/5 pt-12">
           <div className="mb-6">
             <span className="text-cabin-accent font-mono text-xs uppercase tracking-widest font-bold block mb-1">
-              Arrival Instructions
+              {t.beforeArrivalEyebrow}
             </span>
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
               {t.beforeArrivalTitle}
             </h2>
           </div>
-          <BeforeArrivalCard info={t.beforeArrival} copiedLabel={t.copiedLabel} copyLabel={t.copyLabel} />
-        </section>
-
-        {/* Seksjon 3: Wifi og nøkkel */}
-        <section id="wifi-nøkkel" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <WifiCard wifi={t.wifi} copiedLabel={t.copiedLabel} copyLabel={t.copyLabel} />
-        </section>
-
-        {/* Seksjon 4: Hoveddør og Vann */}
-        <section id="instrukser" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <div className="mb-6">
-            <span className="text-cabin-accent font-mono text-xs uppercase tracking-widest font-bold block mb-1">
-              Cabin Guidelines
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
-              Praktiske bruksanvisninger / Instructions
-            </h2>
-          </div>
-          <CabinInstructions door={t.door} water={t.water} videoButtonLabel={t.videoButtonLabel} />
-        </section>
-
-        {/* Seksjon 5: Regler og Sengetøy */}
-        <section id="regler-sengetøy" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <RulesAndLinen linen={t.linen} rules={t.rules} />
-        </section>
-
-        {/* Seksjon 6: Sjekkliste før avreise */}
-        <section id="avreise-sjekkliste" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <InteractiveChecklist checklist={t.checklist} completedLabel={t.completedLabel} />
-        </section>
-
-        {/* Seksjon 7: Turer og Opplevelser */}
-        <section id="turer-opplevelser" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <HikesAndTrips
-            hikes={t.hikes}
-            dayTrips={t.dayTrips}
-            hikesTitle={t.hikesTitle}
-            dayTripsTitle={t.dayTripsTitle}
-            hikesSource={t.hikesSource}
-            tripsSource={t.tripsSource}
+          <BeforeArrivalCard
+            info={t.beforeArrival}
+            copiedLabel={t.copiedLabel}
+            copyAddressLabel={t.copyAddressLabel}
+            navigateLabel={t.navigateLabel}
+            destinationEyebrow={t.destinationEyebrow}
           />
         </section>
 
-        {/* Seksjon 8: Kontakt og nødnumre */}
-        <section id="kontakt-nød" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <ContactEmergencyCard contact={t.contact} welcomeMessage={t.welcomeMessage} />
+        {/* Section: Arrival (wifi/key + door lock, things needed right when guests arrive) */}
+        <section id="ankomst" className="scroll-mt-36 border-t border-white/5 pt-12">
+          <div className="mb-6">
+            <span className="text-cabin-accent font-mono text-xs uppercase tracking-widest font-bold block mb-1">
+              {t.arrivalEyebrow}
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
+              {t.arrivalTitle}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <WifiCard
+              wifi={t.wifi}
+              copiedLabel={t.copiedLabel}
+              copyLabel={t.copyLabel}
+              connectivityEyebrow={t.connectivityEyebrow}
+              wifiKeyTitle={t.wifiKeyTitle}
+              networkLabel={t.networkLabel}
+              securityLabel={t.securityLabel}
+              passwordLabel={t.passwordLabel}
+            />
+            <DoorInstructionsCard door={t.door} accessEyebrow={t.accessEyebrow} />
+          </div>
+        </section>
+
+        {/* Section: During the stay (water, house rules, linen, hikes & trips) */}
+        <section id="opphold" className="scroll-mt-36 border-t border-white/5 pt-12">
+          <div className="mb-6">
+            <span className="text-cabin-accent font-mono text-xs uppercase tracking-widest font-bold block mb-1">
+              {t.stayEyebrow}
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
+              {t.stayTitle}
+            </h2>
+          </div>
+          <div className="space-y-8">
+            <WaterInstructionsCard water={t.water} utilitiesEyebrow={t.utilitiesEyebrow} />
+            <RulesAndLinen
+              linen={t.linen}
+              rules={t.rules}
+              packingListEyebrow={t.packingListEyebrow}
+              houseRulesEyebrow={t.houseRulesEyebrow}
+            />
+            <HikesAndTrips
+              hikes={t.hikes}
+              dayTrips={t.dayTrips}
+              hikesTitle={t.hikesTitle}
+              dayTripsTitle={t.dayTripsTitle}
+              hikesSource={t.hikesSource}
+              tripsSource={t.tripsSource}
+              experiencesTitle={t.experiencesTitle}
+              localGuideEyebrow={t.localGuideEyebrow}
+              visitWebsiteLabel={t.visitWebsiteLabel}
+            />
+          </div>
+        </section>
+
+        {/* Section: Departure checklist */}
+        <section id="avreise" className="scroll-mt-36 border-t border-white/5 pt-12">
+          <InteractiveChecklist checklist={t.checklist} departureEyebrow={t.departureEyebrow} />
+        </section>
+
+        {/* Section: Video guides */}
+        <section id="videoer" className="scroll-mt-36 border-t border-white/5 pt-12">
+          <VideoGuides
+            videos={t.videos}
+            title={t.videosTitle}
+            intro={t.videosIntro}
+            watchVideoLabel={t.watchVideoLabel}
+            videoComingSoonLabel={t.videoComingSoonLabel}
+          />
+        </section>
+
+        {/* Section: Contact and emergency numbers */}
+        <section id="kontakt" className="scroll-mt-36 border-t border-white/5 pt-12">
+          <ContactEmergencyCard
+            contact={t.contact}
+            welcomeMessage={t.welcomeMessage}
+            welcomeEyebrow={t.welcomeEyebrow}
+            emailButtonLabel={t.emailButtonLabel}
+          />
         </section>
 
       </main>
@@ -233,7 +276,7 @@ export default function App() {
       <footer className="mt-24 border-t border-white/5 bg-white/2 py-12 px-4 sm:px-6 lg:px-8 text-center text-text-dim text-xs font-mono">
         <div className="max-w-7xl mx-auto space-y-2">
           <p className="text-cabin-accent font-semibold font-sans">Grostulvegen 97, 3804 Bø i Telemark</p>
-          <p>© 2026 Grostulvegen 97 Guest Guide. Built with care for cabin renters.</p>
+          <p>© 2026 Grostulvegen 97 — {t.footerTagline}</p>
         </div>
       </footer>
     </div>

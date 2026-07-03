@@ -1,13 +1,14 @@
 import React from "react";
 import { BedDouble, Bath, ChefHat, Tv, Flame, Trees, Milestone, Car, Sparkles, Home } from "lucide-react";
-import { CabinStats as CabinStatsType } from "../types";
+import { CabinStats as CabinStatsType, StatsLabels } from "../content/types";
 
 interface CabinStatsProps {
   stats: CabinStatsType;
+  labels: StatsLabels;
   title: string;
 }
 
-export default function CabinStats({ stats, title }: CabinStatsProps) {
+export default function CabinStats({ stats, labels, title }: CabinStatsProps) {
   // Helper to map an amenity to its corresponding icon
   const getAmenityIcon = (amenity: string) => {
     const lowercase = amenity.toLowerCase();
@@ -46,19 +47,19 @@ export default function CabinStats({ stats, title }: CabinStatsProps) {
         <div id="stat-bedrooms" className="p-4 bg-white/5 rounded-2xl border border-white/10 shadow-sm text-center flex flex-col items-center justify-center transition-all hover:bg-white/8">
           <BedDouble className="w-7 h-7 text-cabin-accent mb-2" />
           <span className="text-xl font-bold text-white font-sans">{stats.bedrooms}</span>
-          <span className="text-xs text-text-dim font-medium mt-0.5">Soverom / Bedrooms</span>
+          <span className="text-xs text-text-dim font-medium mt-0.5">{labels.bedrooms}</span>
         </div>
-        
+
         <div id="stat-beds" className="p-4 bg-white/5 rounded-2xl border border-white/10 shadow-sm text-center flex flex-col items-center justify-center transition-all hover:bg-white/8">
           <BedDouble className="w-7 h-7 text-cabin-accent mb-2" />
           <span className="text-xl font-bold text-white font-sans">{stats.beds}</span>
-          <span className="text-xs text-text-dim font-medium mt-0.5">Sengeplasser / Beds</span>
+          <span className="text-xs text-text-dim font-medium mt-0.5">{labels.beds}</span>
         </div>
 
         <div id="stat-bathrooms" className="p-4 bg-white/5 rounded-2xl border border-white/10 shadow-sm text-center flex flex-col items-center justify-center transition-all hover:bg-white/8">
           <Bath className="w-7 h-7 text-cabin-accent mb-2" />
           <span className="text-xl font-bold text-white font-sans">{stats.bathrooms}</span>
-          <span className="text-xs text-text-dim font-medium mt-0.5">Bad / Bathrooms</span>
+          <span className="text-xs text-text-dim font-medium mt-0.5">{labels.bathrooms}</span>
         </div>
       </div>
 

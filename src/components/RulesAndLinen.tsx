@@ -1,13 +1,15 @@
 import React from "react";
 import { AlertCircle, FileText, Ban, Trash, HelpCircle, Shield, Wind, Sparkles } from "lucide-react";
-import { LinenInfo, HouseRules } from "../types";
+import { LinenInfo, HouseRules } from "../content/types";
 
 interface RulesAndLinenProps {
   linen: LinenInfo;
   rules: HouseRules;
+  packingListEyebrow: string;
+  houseRulesEyebrow: string;
 }
 
-export default function RulesAndLinen({ linen, rules }: RulesAndLinenProps) {
+export default function RulesAndLinen({ linen, rules, packingListEyebrow, houseRulesEyebrow }: RulesAndLinenProps) {
   // We can helper-map specific icons to specific house rules to make them look custom-crafted rather than generic!
   const getRuleIcon = (rule: string) => {
     const lowercase = rule.toLowerCase();
@@ -33,7 +35,7 @@ export default function RulesAndLinen({ linen, rules }: RulesAndLinenProps) {
         <div>
           <div className="flex items-start justify-between mb-6 border-b border-cabin-accent/15 pb-3">
             <div>
-              <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">Packing List</span>
+              <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">{packingListEyebrow}</span>
               <h3 id="linen-title" className="text-2xl font-bold tracking-tight text-cabin-accent font-display">
                 {linen.title}
               </h3>
@@ -44,7 +46,7 @@ export default function RulesAndLinen({ linen, rules }: RulesAndLinenProps) {
           </div>
 
           <p className="text-sm text-text-dim mb-6 font-medium">
-            Husk å pakke med følgende / Remember to bring the following items:
+            {linen.intro}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -68,7 +70,7 @@ export default function RulesAndLinen({ linen, rules }: RulesAndLinenProps) {
         <div>
           <div className="flex items-start justify-between mb-6 border-b border-cabin-accent/15 pb-3">
             <div>
-              <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">Cabin Code</span>
+              <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">{houseRulesEyebrow}</span>
               <h3 id="rules-title" className="text-2xl font-bold tracking-tight text-cabin-accent font-display">
                 {rules.title}
               </h3>
@@ -89,7 +91,7 @@ export default function RulesAndLinen({ linen, rules }: RulesAndLinenProps) {
         </div>
 
         <div className="mt-6 text-xs text-text-dim text-center font-mono">
-          Takk for at dere hjelper oss å ta vare på hytta! / Thank you for caring for our cabin!
+          {rules.thankYouNote}
         </div>
       </div>
     </div>

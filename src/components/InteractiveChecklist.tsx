@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { CheckSquare, Square, ClipboardCheck, Trash2, ShieldAlert } from "lucide-react";
-import { DepartureChecklist } from "../types";
+import { DepartureChecklist } from "../content/types";
 
 interface InteractiveChecklistProps {
   checklist: DepartureChecklist;
-  completedLabel: string;
+  departureEyebrow: string;
 }
 
-export default function InteractiveChecklist({ checklist, completedLabel }: InteractiveChecklistProps) {
+export default function InteractiveChecklist({ checklist, departureEyebrow }: InteractiveChecklistProps) {
   const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>(() => {
     try {
       const saved = localStorage.getItem("grostulvegen_checklist_progress");
@@ -44,7 +44,7 @@ export default function InteractiveChecklist({ checklist, completedLabel }: Inte
     <div id="checklist-card" className="bg-white/3 border border-white/8 backdrop-blur-md rounded-3xl p-6 sm:p-8 text-text-light shadow-xl relative">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4 border-b border-cabin-accent/15 pb-3">
         <div>
-          <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">Departure</span>
+          <span className="text-text-dim font-mono text-xs uppercase tracking-widest block mb-1">{departureEyebrow}</span>
           <h3 id="checklist-title" className="text-2xl font-bold tracking-tight text-cabin-accent font-display">
             {checklist.title}
           </h3>
@@ -57,7 +57,7 @@ export default function InteractiveChecklist({ checklist, completedLabel }: Inte
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-white/10 hover:bg-white/5 active:scale-95 text-xs font-semibold text-text-light transition-all self-start sm:self-auto cursor-pointer"
           >
             <Trash2 className="w-3.5 h-3.5 text-cabin-accent" />
-            <span>Reset</span>
+            <span>{checklist.resetLabel}</span>
           </button>
         )}
       </div>
@@ -66,7 +66,7 @@ export default function InteractiveChecklist({ checklist, completedLabel }: Inte
       <div className="mb-6 p-4 bg-white/5 rounded-2xl border border-white/10">
         <div className="flex justify-between items-center mb-2">
           <span className="text-sm font-semibold text-text-light">
-            {completedCount} av {totalItems} {completedLabel}
+            {completedCount} {checklist.ofLabel} {totalItems} {checklist.completedLabel}
           </span>
           <span className="text-sm font-bold text-cabin-accent">{progressPercent}%</span>
         </div>
@@ -112,7 +112,7 @@ export default function InteractiveChecklist({ checklist, completedLabel }: Inte
       <div id="checklist-warning-box" className="mt-6 flex gap-3 p-4 bg-red-950/20 border border-red-900/30 rounded-2xl text-text-light text-sm leading-relaxed">
         <ShieldAlert className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
         <div>
-          <p className="font-bold text-red-400 mb-0.5">Viktig / Important</p>
+          <p className="font-bold text-red-400 mb-0.5">{checklist.importantLabel}</p>
           <p className="text-slate-300 text-xs sm:text-sm">{checklist.importantNote}</p>
         </div>
       </div>
