@@ -201,6 +201,7 @@ export const no: Translation = {
         "En tur på ca. 8–10 km tur-retur avhengig av rute. Mindre krevende enn Øysteinnatten, og passeres også på vei dit. Kalles Gleksefjell på turkartet som henger i stuen på hytta.",
       difficulty: "hike",
       badge: "Tur",
+      website: "https://ut.no/kart/stedsnavn/487612/gleksefjell#11/59.4916/8.9814",
     },
     {
       name: "Tretoppen",
@@ -216,12 +217,14 @@ export const no: Translation = {
       details: "Mer krevende enn Glekse. Kan nås videre fra Hellerdalskyrkja.",
       difficulty: "moderate",
       badge: "Moderat",
+      website: "https://www.alltrails.com/nb-no/sti/norway/vestfold-og-telemark/falkefjell",
     },
     {
       name: "Hellerdalskyrkja",
       details: "Store bergsprekker og en hule man kan gå gjennom, med egen sagnhistorie om to jotner.",
       difficulty: "hike",
       badge: "Tur",
+      website: "https://boturlag.no/webkart/Lifjell/Hellerdalskyrkja.pdf",
     },
   ],
   dayTrips: [
@@ -230,6 +233,7 @@ export const no: Translation = {
       distance: "Kort kjøretur fra Bø sentrum",
       description:
         "Bøs mest populære turmål, en spektakulær steinformasjon som nås med bil og en kort spasertur fra parkeringen.",
+      website: "https://ut.no/sted/145647599/gygrestolen",
     },
     {
       name: "Bø Sommarland",

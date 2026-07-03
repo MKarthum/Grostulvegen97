@@ -201,6 +201,7 @@ export const en: Translation = {
         "A hike of about 8–10 km round trip depending on the route. Less demanding than Øysteinnatten, and also passed on the way there. Called Gleksefjell on the trail map hanging in the cabin's living room.",
       difficulty: "hike",
       badge: "Hike",
+      website: "https://ut.no/kart/stedsnavn/487612/gleksefjell#11/59.4916/8.9814",
     },
     {
       name: "Tretoppen",
@@ -216,12 +217,14 @@ export const en: Translation = {
       details: "More demanding than Glekse. Reachable onward from Hellerdalskyrkja.",
       difficulty: "moderate",
       badge: "Moderate",
+      website: "https://www.alltrails.com/nb-no/sti/norway/vestfold-og-telemark/falkefjell",
     },
     {
       name: "Hellerdalskyrkja",
       details: "Large cracks in the rock and a cave you can walk through, with its own local legend of two giants.",
       difficulty: "hike",
       badge: "Hike",
+      website: "https://boturlag.no/webkart/Lifjell/Hellerdalskyrkja.pdf",
     },
   ],
   dayTrips: [
@@ -229,6 +232,7 @@ export const en: Translation = {
       name: "Gygrestolen",
       distance: "A short drive from Bø town centre",
       description: "Bø's most popular destination, a striking rock formation reached by car and a short walk from the car park.",
+      website: "https://ut.no/sted/145647599/gygrestolen",
     },
     {
       name: "Bø Sommarland",
