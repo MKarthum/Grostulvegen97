@@ -46,7 +46,9 @@ export const en: Translation = {
   beforeArrivalTitle: "Before you arrive",
   beforeArrivalEyebrow: "Travel information",
   destinationEyebrow: "Destination",
-  navigateLabel: "Navigate",
+  navigateLabel: "Google Maps",
+  navigateAppleLabel: "Apple Maps",
+  navigationNote: "Google Maps currently has the wrong pin for this address (a correction has been submitted to Google, but isn't live yet). Use the \"Google Maps\" button above for the correct location, or use Apple Maps, which takes you all the way to the cabin.",
   copyAddressLabel: "Copy address",
 
   arrivalTitle: "Arrival",
@@ -79,7 +81,7 @@ export const en: Translation = {
 
   stats: {
     bedrooms: "4 bedrooms",
-    beds: "12 beds",
+    beds: "9 beds + sofa bed for 2",
     bathrooms: "2 bathrooms",
     amenities: [
       "Fully equipped kitchen",

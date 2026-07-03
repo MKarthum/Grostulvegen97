@@ -158,6 +158,8 @@ export interface Translation {
   beforeArrivalEyebrow: string;
   destinationEyebrow: string;
   navigateLabel: string;
+  navigateAppleLabel: string;
+  navigationNote: string;
   copyAddressLabel: string;
 
   arrivalTitle: string;

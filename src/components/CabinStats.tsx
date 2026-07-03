@@ -46,7 +46,7 @@ export default function CabinStats({ stats, labels, title }: CabinStatsProps) {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
         <div id="stat-bedrooms" className="p-4 bg-white/5 rounded-2xl border border-white/10 shadow-sm text-center flex flex-col items-center justify-center transition-all hover:bg-white/8">
           <BedDouble className="w-7 h-7 text-cabin-accent mb-2" />
-          <span className="text-xl font-bold text-white font-sans">{stats.bedrooms}</span>
+          <span className="text-lg font-bold text-white font-sans">{stats.bedrooms}</span>
           <span className="text-xs text-text-dim font-medium mt-0.5">{labels.bedrooms}</span>
         </div>
 

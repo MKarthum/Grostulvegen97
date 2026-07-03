@@ -46,7 +46,9 @@ export const no: Translation = {
   beforeArrivalTitle: "Før dere kommer",
   beforeArrivalEyebrow: "Reiseinformasjon",
   destinationEyebrow: "Reisemål",
-  navigateLabel: "Naviger",
+  navigateLabel: "Google Maps",
+  navigateAppleLabel: "Apple Maps",
+  navigationNote: "Google Maps har foreløpig feil posisjon for adressen (rettelse er sendt inn til Google, men ikke live ennå). Bruk «Google Maps»-knappen over for korrekt posisjon, eller bruk Apple Maps, som tar deg helt frem til hytta.",
   copyAddressLabel: "Kopier adresse",
 
   arrivalTitle: "Ankomst",
@@ -79,7 +81,7 @@ export const no: Translation = {
 
   stats: {
     bedrooms: "4 soverom",
-    beds: "12 senger",
+    beds: "9 sengeplasser + sovesofa til 2",
     bathrooms: "2 bad",
     amenities: [
       "Fullt utstyrt kjøkken",

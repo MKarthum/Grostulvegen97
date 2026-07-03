@@ -7,6 +7,8 @@ interface BeforeArrivalCardProps {
   copiedLabel: string;
   copyAddressLabel: string;
   navigateLabel: string;
+  navigateAppleLabel: string;
+  navigationNote: string;
   destinationEyebrow: string;
 }
 
@@ -15,6 +17,8 @@ export default function BeforeArrivalCard({
   copiedLabel,
   copyAddressLabel,
   navigateLabel,
+  navigateAppleLabel,
+  navigationNote,
   destinationEyebrow,
 }: BeforeArrivalCardProps) {
   const [copiedAddress, setCopiedAddress] = useState(false);
@@ -25,6 +29,7 @@ export default function BeforeArrivalCard({
     setTimeout(() => setCopiedAddress(false), 2000);
   };
 
+  const appleMapsUrl = `https://maps.apple.com/?address=${encodeURIComponent(info.address.value)}`;
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -79,7 +84,22 @@ export default function BeforeArrivalCard({
             <Navigation className="w-4 h-4 fill-white" />
             <span>{navigateLabel}</span>
           </a>
+
+          <a
+            id="navigate-apple-maps-link"
+            href={appleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-white/15 hover:bg-white/5 active:scale-95 font-semibold text-sm text-text-light transition-all cursor-pointer"
+          >
+            <Navigation className="w-4 h-4 text-cabin-accent" />
+            <span>{navigateAppleLabel}</span>
+          </a>
         </div>
+
+        <p id="navigation-note" className="mt-3 text-xs text-text-dim leading-relaxed">
+          {navigationNote}
+        </p>
       </div>
 
       {/* Checking & Parking Times */}

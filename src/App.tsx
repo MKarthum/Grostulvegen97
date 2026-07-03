@@ -167,6 +167,8 @@ export default function App() {
             copiedLabel={t.copiedLabel}
             copyAddressLabel={t.copyAddressLabel}
             navigateLabel={t.navigateLabel}
+            navigateAppleLabel={t.navigateAppleLabel}
+            navigationNote={t.navigationNote}
             destinationEyebrow={t.destinationEyebrow}
           />
         </section>
