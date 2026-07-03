@@ -87,6 +87,7 @@ export interface Hike {
   details: string;
   difficulty: HikeDifficulty;
   badge: string;
+  website?: string;
 }
 
 export interface DayTrip {
@@ -204,6 +205,7 @@ export interface Translation {
   hikesTitle: string;
   dayTripsTitle: string;
   hikesSource: string;
+  hikesMapNote: string;
   tripsSource: string;
   visitWebsiteLabel: string;
   contact: ContactEmergency;

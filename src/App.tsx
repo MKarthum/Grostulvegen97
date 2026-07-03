@@ -222,6 +222,7 @@ export default function App() {
               hikesTitle={t.hikesTitle}
               dayTripsTitle={t.dayTripsTitle}
               hikesSource={t.hikesSource}
+              hikesMapNote={t.hikesMapNote}
               tripsSource={t.tripsSource}
               experiencesTitle={t.experiencesTitle}
               localGuideEyebrow={t.localGuideEyebrow}

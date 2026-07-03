@@ -8,6 +8,7 @@ interface HikesAndTripsProps {
   hikesTitle: string;
   dayTripsTitle: string;
   hikesSource: string;
+  hikesMapNote: string;
   tripsSource: string;
   experiencesTitle: string;
   localGuideEyebrow: string;
@@ -28,6 +29,7 @@ export default function HikesAndTrips({
   hikesTitle,
   dayTripsTitle,
   hikesSource,
+  hikesMapNote,
   tripsSource,
   experiencesTitle,
   localGuideEyebrow,
@@ -99,19 +101,38 @@ export default function HikesAndTrips({
                   <p className="text-sm text-text-dim leading-relaxed font-medium">{hike.details}</p>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
+                <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between gap-2">
                   <span className={`inline-flex items-center text-xs px-2.5 py-0.5 rounded-full font-semibold border ${badgeColors[hike.difficulty]}`}>
                     {hike.badge}
                   </span>
-                  <span className="text-xs text-text-dim font-mono">Lifjell</span>
+                  {hike.website ? (
+                    <a
+                      id={`hike-link-${idx}`}
+                      href={hike.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-xs font-semibold text-cabin-accent hover:text-white transition-colors cursor-pointer"
+                    >
+                      <span>{visitWebsiteLabel}</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  ) : (
+                    <span className="text-xs text-text-dim font-mono">Lifjell</span>
+                  )}
                 </div>
               </div>
             ))}
           </div>
 
-          <div id="hikes-footer" className="mt-6 flex items-center gap-2 p-3 bg-white/3 rounded-xl text-xs text-text-dim font-mono border border-white/5">
-            <Info className="w-4 h-4 text-cabin-accent shrink-0" />
-            <span>{hikesSource}</span>
+          <div id="hikes-footer" className="mt-6 space-y-2">
+            <div className="flex items-center gap-2 p-3 bg-white/3 rounded-xl text-xs text-text-dim font-mono border border-white/5">
+              <Info className="w-4 h-4 text-cabin-accent shrink-0" />
+              <span>{hikesSource}</span>
+            </div>
+            <div id="hikes-map-note" className="flex items-center gap-2 p-3 bg-white/3 rounded-xl text-xs text-text-dim border border-white/5">
+              <MapPin className="w-4 h-4 text-cabin-accent shrink-0" />
+              <span>{hikesMapNote}</span>
+            </div>
           </div>
         </div>
       ) : (

@@ -193,25 +193,29 @@ export const no: Translation = {
         "Høyeste toppen på Lifjell. Utgangspunkt fra Jønnbu, like ved hytta. Rundtur på ca. 12 km, rundt 4 timer, høydeforskjell ca. 425 meter, moderat krevende.",
       difficulty: "moderate",
       badge: "Moderat krevende",
+      website: "https://ut.no/turforslag/119479/topptur-til-ysteinnatten-1174-moh",
     },
     {
       name: "Glekse",
-      details: "Passeres på vei mot Øysteinnatten, en av de mer krevende stigningene i terrenget.",
-      difficulty: "demanding",
-      badge: "Krevende",
+      details:
+        "En kortere og mindre krevende tur enn Øysteinnatten, og passeres også på vei dit. Kalles Gleksefjell på turkartet som henger i stuen på hytta.",
+      difficulty: "hike",
+      badge: "Kort tur",
     },
     {
       name: "Tretoppen",
-      details: "En av våre egne favoritturer i området, spør oss gjerne om veibeskrivelse.",
+      details:
+        "En av de best skiltede turene i området, med utgangspunkt fra Jønnbu. Går over de tre nærtoppene Anebunatten, Krintofjellet og Bøkstulnatten – du kan også velge å bestige bare én av dem for en kortere tur.",
       difficulty: "favorite",
       badge: "Anbefalt",
+      website: "https://ut.no/turforslag/119484/krintofjellet-pa-lifjell-familievennlig",
     },
     {
       name: "Falkefjell",
       elevation: "983 moh",
-      details: "Kan nås videre fra Hellerdalskyrkja.",
-      difficulty: "hike",
-      badge: "Tur",
+      details: "Mer krevende enn Glekse. Kan nås videre fra Hellerdalskyrkja.",
+      difficulty: "moderate",
+      badge: "Moderat",
     },
     {
       name: "Hellerdalskyrkja",
@@ -219,14 +223,14 @@ export const no: Translation = {
       difficulty: "hike",
       badge: "Tur",
     },
-    {
-      name: "Gygrestolen",
-      details: "Bøs mest populære tur, en spektakulær steinformasjon. Rundtur ca. 6-7 km, kjøring fra Bø sentrum.",
-      difficulty: "popular",
-      badge: "Populær",
-    },
   ],
   dayTrips: [
+    {
+      name: "Gygrestolen",
+      distance: "Kort kjøretur fra Bø sentrum",
+      description:
+        "Bøs mest populære turmål, en spektakulær steinformasjon som nås med bil og en kort spasertur fra parkeringen.",
+    },
     {
       name: "Bø Sommarland",
       distance: "ca. 11 km fra hytta",
@@ -249,6 +253,7 @@ export const no: Translation = {
   hikesTitle: "Turer på Lifjell",
   dayTripsTitle: "Turer med bil",
   hikesSource: "Kilder: ut.no, visitbo.no, boturlag.no.",
+  hikesMapNote: "Det henger et turkart over Lifjell i stuen på hytta, med mange flere turforslag i området.",
   tripsSource: "Kilder: sommarland.no, bomuseum.no, egen Airbnb-annonse for hytta.",
   visitWebsiteLabel: "Besøk nettside",
   videos: [

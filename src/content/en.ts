@@ -193,25 +193,29 @@ export const en: Translation = {
         "The highest peak on Lifjell. Starting point at Jønnbu, close to the cabin. About a 12 km loop, roughly 4 hours, elevation gain around 425 m, moderately challenging.",
       difficulty: "moderate",
       badge: "Moderate",
+      website: "https://ut.no/turforslag/119479/topptur-til-ysteinnatten-1174-moh",
     },
     {
       name: "Glekse",
-      details: "Passed on the way up to Øysteinnatten, one of the steeper sections of the route.",
-      difficulty: "demanding",
-      badge: "Demanding",
+      details:
+        "A shorter and less demanding hike than Øysteinnatten, and also passed on the way there. Called Gleksefjell on the trail map hanging in the cabin's living room.",
+      difficulty: "hike",
+      badge: "Short hike",
     },
     {
       name: "Tretoppen",
-      details: "One of our own favourite local hikes, feel free to ask us for directions.",
+      details:
+        "One of the best signposted hikes in the area, starting from Jønnbu. Goes over the three nearby peaks Anebunatten, Krintofjellet, and Bøkstulnatten – you can also choose to climb just one of them for a shorter hike.",
       difficulty: "favorite",
       badge: "Favorite",
+      website: "https://ut.no/turforslag/119484/krintofjellet-pa-lifjell-familievennlig",
     },
     {
       name: "Falkefjell",
       elevation: "983 m",
-      details: "Reachable onward from Hellerdalskyrkja.",
-      difficulty: "hike",
-      badge: "Hike",
+      details: "More demanding than Glekse. Reachable onward from Hellerdalskyrkja.",
+      difficulty: "moderate",
+      badge: "Moderate",
     },
     {
       name: "Hellerdalskyrkja",
@@ -219,14 +223,13 @@ export const en: Translation = {
       difficulty: "hike",
       badge: "Hike",
     },
-    {
-      name: "Gygrestolen",
-      details: "Bø's most popular hike, a striking rock formation. About a 6 to 7 km loop, drive from Bø town centre.",
-      difficulty: "popular",
-      badge: "Popular",
-    },
   ],
   dayTrips: [
+    {
+      name: "Gygrestolen",
+      distance: "A short drive from Bø town centre",
+      description: "Bø's most popular destination, a striking rock formation reached by car and a short walk from the car park.",
+    },
     {
       name: "Bø Sommarland",
       distance: "about 11 km from the cabin",
@@ -249,6 +252,7 @@ export const en: Translation = {
   hikesTitle: "Hikes on Lifjell",
   dayTripsTitle: "Day trips by car",
   hikesSource: "Sources: ut.no, visitbo.no, boturlag.no.",
+  hikesMapNote: "There's a hiking map of Lifjell in the cabin's living room, showing many more route options in the area.",
   tripsSource: "Sources: sommarland.no, bomuseum.no, our own Airbnb listing for the cabin.",
   visitWebsiteLabel: "Visit website",
   videos: [
