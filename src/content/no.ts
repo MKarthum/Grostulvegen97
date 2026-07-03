@@ -31,6 +31,17 @@ export const no: Translation = {
   },
 
   aboutTitle: "Om hytta",
+  photosTitle: "Bilder",
+  galleryPhotos: [
+    { id: "exterior-summer", alt: "Hytta sett utenfra en solfylt dag" },
+    { id: "living-room-view", alt: "Stua med panoramautsikt over fjellet" },
+    { id: "kitchen", alt: "Det fullt utstyrte kjøkkenet" },
+    { id: "dining-view", alt: "Spisebord med utsikt over fjellet" },
+    { id: "bedroom", alt: "Soverom med vindu ut mot skogen" },
+    { id: "wood-stove", alt: "Peisen tent en kald kveld" },
+    { id: "terrace", alt: "Terrassen med utsikt over snødekte fjell" },
+    { id: "hike-view", alt: "Utsikt fra en av turene på Lifjell" },
+  ],
 
   beforeArrivalTitle: "Før dere kommer",
   beforeArrivalEyebrow: "Reiseinformasjon",

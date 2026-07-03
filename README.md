@@ -58,6 +58,24 @@ oversatt tittel/beskrivelse). Hver video har et `url`-felt:
 - Ikke last opp videofiler direkte til dette GitHub-repoet — de hører
   hjemme i YouTube/Drive, ikke i git-historikken.
 
+## Bytte ut bilder
+
+Bildene ligger i `src/assets/images/`. Hero-bildet øverst på siden er
+`hero-cabin-exterior.jpg`, importert direkte i `src/App.tsx`. De åtte
+bildene i bildegalleriet under «Om hytta» er importert i
+`src/components/PhotoGallery.tsx`, koblet til alt-tekst via en `id` som
+må stemme med `id`-feltet i `galleryPhotos`-lista i `src/content/no.ts`
+og `en.ts`.
+
+For å bytte ut et bilde:
+
+1. Legg det nye bildet i `src/assets/images/` (helst forhåndskomprimert,
+   maks ca. 1400 px bredde for galleribilder / 1920 px for hero, som
+   vanlig JPEG — store originalbilder gjør repoet unødvendig tungt).
+2. Pek importen i `App.tsx` eller `PhotoGallery.tsx` til den nye filen.
+3. Oppdater alt-teksten i `galleryPhotos` i begge språkfilene hvis
+   motivet endres.
+
 ## Bygge / teste før commit
 
 Prosjektet har ingen automatiske tester, men kjør alltid disse to

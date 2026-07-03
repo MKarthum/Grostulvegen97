@@ -97,6 +97,13 @@ export interface EmergencyContact {
   label: string;
 }
 
+// Alt text for the photo gallery. `id` must match one of the image
+// files imported in PhotoGallery.tsx (src/assets/images).
+export interface GalleryPhoto {
+  id: string;
+  alt: string;
+}
+
 export interface ContactEmergency {
   title: string;
   questionsEmail: { label: string; email: string };
@@ -140,6 +147,8 @@ export interface Translation {
   nav: NavLabels;
 
   aboutTitle: string;
+  photosTitle: string;
+  galleryPhotos: GalleryPhoto[];
 
   beforeArrivalTitle: string;
   beforeArrivalEyebrow: string;

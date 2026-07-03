@@ -13,6 +13,8 @@ import InteractiveChecklist from "./components/InteractiveChecklist";
 import HikesAndTrips from "./components/HikesAndTrips";
 import VideoGuides from "./components/VideoGuides";
 import ContactEmergencyCard from "./components/ContactEmergencyCard";
+import PhotoGallery from "./components/PhotoGallery";
+import heroImage from "./assets/images/hero-cabin-exterior.jpg";
 
 // Icons for navigation bar
 import {
@@ -97,34 +99,15 @@ export default function App() {
 
       {/* Hero Banner Section */}
       <div id="hero-banner" className="relative h-[40vh] sm:h-[42vh] min-h-[300px] w-full overflow-hidden bg-cabin-dark flex items-end">
-        {/* Textured background: no photo yet. Replace this block with a real <img> of the cabin
-            once you have one (see src/assets/images and swap in App.tsx). */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(circle at 75% 15%, rgba(217,182,138,0.14) 0%, transparent 45%), radial-gradient(circle at 20% 90%, rgba(45,58,52,0.9) 0%, #151A18 60%)",
-          }}
-        />
-        <svg
-          className="absolute inset-x-0 bottom-0 w-full h-1/2 text-cabin-green/60"
-          viewBox="0 0 1200 300"
-          preserveAspectRatio="none"
+        {/* Replace src/assets/images/hero-cabin-exterior.jpg to swap the hero photo. */}
+        <img
+          src={heroImage}
+          alt=""
           aria-hidden="true"
-        >
-          <path
-            d="M0,300 L0,180 L150,90 L280,170 L420,60 L560,160 L700,40 L860,150 L1000,80 L1200,170 L1200,300 Z"
-            fill="currentColor"
-            opacity="0.5"
-          />
-          <path
-            d="M0,300 L0,220 L180,150 L340,210 L500,120 L650,200 L820,110 L980,190 L1200,140 L1200,300 Z"
-            fill="currentColor"
-            opacity="0.8"
-          />
-        </svg>
-        {/* Elegant Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-cabin-dark via-cabin-dark/20 to-transparent" />
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Gradient overlay so the heading text stays readable over the photo */}
+        <div className="absolute inset-0 bg-gradient-to-t from-cabin-dark via-cabin-dark/50 to-cabin-dark/10" />
 
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 text-left animate-fade-in-up">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-cabin-accent/15 text-cabin-accent font-mono text-xs font-bold rounded-full border border-cabin-accent/25 backdrop-blur-md mb-4 animate-pulse">
@@ -166,6 +149,7 @@ export default function App() {
         {/* Section: About the cabin */}
         <section id="om-hytta" className="scroll-mt-36">
           <CabinStats stats={t.stats} labels={t.statsLabels} title={t.aboutTitle} />
+          <PhotoGallery photos={t.galleryPhotos} title={t.photosTitle} />
         </section>
 
         {/* Section: Before arrival (address, check-in/out, parking) */}

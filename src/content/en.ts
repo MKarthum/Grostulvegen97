@@ -31,6 +31,17 @@ export const en: Translation = {
   },
 
   aboutTitle: "About the cabin",
+  photosTitle: "Photos",
+  galleryPhotos: [
+    { id: "exterior-summer", alt: "The cabin seen from outside on a sunny day" },
+    { id: "living-room-view", alt: "The living room with a panoramic mountain view" },
+    { id: "kitchen", alt: "The fully equipped kitchen" },
+    { id: "dining-view", alt: "The dining table with a mountain view" },
+    { id: "bedroom", alt: "A bedroom with a window facing the forest" },
+    { id: "wood-stove", alt: "The wood stove lit on a cold evening" },
+    { id: "terrace", alt: "The terrace overlooking snow-covered mountains" },
+    { id: "hike-view", alt: "The view from one of the hikes on Lifjell" },
+  ],
 
   beforeArrivalTitle: "Before you arrive",
   beforeArrivalEyebrow: "Travel information",
