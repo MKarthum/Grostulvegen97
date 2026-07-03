@@ -103,6 +103,12 @@ export const en: Translation = {
       label: "Parking",
       value: "Space for 4 cars at the cabin",
     },
+    barrier: {
+      label: "Barrier",
+      phone: "+47 580000609208",
+      info: "The barrier only opens for approved phone numbers. Agree with us before your stay which number should be approved.",
+      callLabel: "Call barrier",
+    },
   },
   wifi: {
     network: "LishanWifi",

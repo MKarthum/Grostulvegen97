@@ -103,6 +103,12 @@ export const no: Translation = {
       label: "Parkering",
       value: "Plass til 4 biler ved hytta",
     },
+    barrier: {
+      label: "Bom",
+      phone: "+47 580000609208",
+      info: "Bommen åpnes kun for godkjente telefonnumre. Avtal med oss i forkant av oppholdet hvilket nummer som skal godkjennes.",
+      callLabel: "Ring bom",
+    },
   },
   wifi: {
     network: "LishanWifi",

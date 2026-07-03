@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, Clock, Car, Copy, Check, Navigation, Calendar } from "lucide-react";
+import { MapPin, Clock, Car, Copy, Check, Navigation, PhoneCall } from "lucide-react";
 import { BeforeArrivalInfo } from "../content/types";
 
 interface BeforeArrivalCardProps {
@@ -126,6 +126,30 @@ export default function BeforeArrivalCard({
             </span>
             <p className="text-sm font-semibold text-text-light leading-relaxed">{info.parking.value}</p>
           </div>
+        </div>
+
+        {/* Barrier / bom info */}
+        <div id="barrier-box" className="sm:col-span-2 bg-white/3 border border-white/8 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col sm:flex-row sm:items-center gap-4 transition-all hover:bg-white/5">
+          <div className="flex items-center gap-4 flex-1">
+            <div className="bg-white/5 border border-white/10 p-3 rounded-2xl shrink-0">
+              <PhoneCall className="w-6 h-6 text-cabin-accent" />
+            </div>
+            <div>
+              <span className="text-xs font-mono text-text-dim uppercase tracking-widest block mb-0.5">
+                {info.barrier.label}
+              </span>
+              <p className="text-sm font-mono font-semibold text-white">{info.barrier.phone}</p>
+              <p className="text-xs text-text-dim leading-relaxed mt-1">{info.barrier.info}</p>
+            </div>
+          </div>
+          <a
+            id="call-barrier-btn"
+            href={`tel:${info.barrier.phone.replace(/\s+/g, "")}`}
+            className="flex items-center justify-center gap-2 px-4 py-2.5 bg-cabin-green hover:bg-cabin-green/85 border border-cabin-accent/20 active:scale-95 font-semibold text-xs text-white rounded-xl shadow-md transition-all cursor-pointer shrink-0"
+          >
+            <PhoneCall className="w-3.5 h-3.5" />
+            <span>{info.barrier.callLabel}</span>
+          </a>
         </div>
       </div>
     </div>

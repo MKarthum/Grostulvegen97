@@ -24,6 +24,7 @@ export interface BeforeArrivalInfo {
   checkIn: { label: string; value: string; caption: string };
   checkOut: { label: string; value: string; caption: string };
   parking: { label: string; value: string };
+  barrier: { label: string; phone: string; info: string; callLabel: string };
 }
 
 export interface WifiInfo {
