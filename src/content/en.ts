@@ -204,7 +204,7 @@ export const en: Translation = {
       website: "https://ut.no/kart/stedsnavn/487612/gleksefjell#11/59.4916/8.9814",
     },
     {
-      name: "Tretoppen",
+      name: "Tretopper'n",
       details:
         "One of the best signposted hikes in the area, starting from Jønnbu. Goes over the three nearby peaks Anebunatten, Krintofjellet, and Bøkstulnatten – you can also choose to climb just one of them for a shorter hike.",
       difficulty: "favorite",

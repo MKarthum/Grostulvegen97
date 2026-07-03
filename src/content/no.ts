@@ -204,7 +204,7 @@ export const no: Translation = {
       website: "https://ut.no/kart/stedsnavn/487612/gleksefjell#11/59.4916/8.9814",
     },
     {
-      name: "Tretoppen",
+      name: "Tretopper'n",
       details:
         "En av de best skiltede turene i området, med utgangspunkt fra Jønnbu. Går over de tre nærtoppene Anebunatten, Krintofjellet og Bøkstulnatten – du kan også velge å bestige bare én av dem for en kortere tur.",
       difficulty: "favorite",
