@@ -95,16 +95,26 @@ export default function CabinInstructions({ door, water, videoButtonLabel }: Cab
               <p className="text-xs text-text-dim">Se nøyaktig hvordan du åpner og stenger vannet.</p>
             </div>
           </div>
-          <a
-            id="water-video-link"
-            href={water.videoPlaceholder}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-cabin-green hover:bg-cabin-green/85 border border-cabin-accent/15 text-white font-medium text-xs rounded-xl shadow-md transition-colors cursor-pointer"
-          >
-            <span>{videoButtonLabel}</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          {water.videoPlaceholder ? (
+            <a
+              id="water-video-link"
+              href={water.videoPlaceholder}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-cabin-green hover:bg-cabin-green/85 border border-cabin-accent/15 text-white font-medium text-xs rounded-xl shadow-md transition-colors cursor-pointer"
+            >
+              <span>{videoButtonLabel}</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          ) : (
+            <span
+              id="water-video-link"
+              aria-disabled="true"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-white/5 border border-white/10 text-text-dim font-medium text-xs rounded-xl cursor-not-allowed select-none"
+            >
+              <span>{videoButtonLabel}</span>
+            </span>
+          )}
         </div>
       </div>
     </div>

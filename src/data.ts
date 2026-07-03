@@ -76,7 +76,7 @@ export const translations: Record<"no" | "en", Translation> = {
         "Løft opp lokket inne i skapet. Der finner dere en blå spak.",
         "Vri spaken for å åpne vannet. Steng vannet ved å vri motsatt vei."
       ],
-      videoPlaceholder: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Standard video template or can be configured. The text says "Lim inn lenken til videoen her når den er klar".
+      videoPlaceholder: "" // Add the real video link here when it is ready (e.g. a shared Google Drive or YouTube link).
     },
     linen: {
       title: "Sengetøy og håndklær",
@@ -116,7 +116,7 @@ export const translations: Record<"no" | "en", Translation> = {
       {
         name: "Øysteinnatten",
         elevation: "1174 moh",
-        details: "Rundtur på ca. 7 km, rundt 4 timer, moderat krevende. Høyeste toppen på Lifjell."
+        details: "Høyeste toppen på Lifjell. Utgangspunkt fra Jønnbu, like ved hytta. Rundtur på ca. 12 km, rundt 4 timer, høydeforskjell ca. 425 meter, moderat krevende."
       },
       {
         name: "Glekse",
@@ -157,7 +157,7 @@ export const translations: Record<"no" | "en", Translation> = {
         name: "Heddal stavkirke",
         distance: "ca. 36 km fra hytta",
         description: "Norges største stavkirke.",
-        website: "https://heddalstavkirke.no"
+        website: "https://www.heddalstavkirke.no/"
       }
     ],
     contact: {
@@ -250,7 +250,7 @@ export const translations: Record<"no" | "en", Translation> = {
         "Lift the lid inside the cabinet. You will find a blue lever.",
         "Turn the lever to turn the water on. Turn it the other way to turn it off."
       ],
-      videoPlaceholder: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      videoPlaceholder: ""
     },
     linen: {
       title: "Bed linen and towels",
@@ -290,7 +290,7 @@ export const translations: Record<"no" | "en", Translation> = {
       {
         name: "Øysteinnatten",
         elevation: "1174 m",
-        details: "The highest peak on Lifjell. About a 7 km loop, roughly 4 hours, moderately challenging."
+        details: "The highest peak on Lifjell. Starting point at Jønnbu, close to the cabin. About a 12 km loop, roughly 4 hours, elevation gain around 425 m, moderately challenging."
       },
       {
         name: "Glekse",
@@ -331,7 +331,7 @@ export const translations: Record<"no" | "en", Translation> = {
         name: "Heddal stave church",
         distance: "about 36 km from the cabin",
         description: "Norway's largest stave church.",
-        website: "https://heddalstavkirke.no"
+        website: "https://www.heddalstavkirke.no/"
       }
     ],
     contact: {
