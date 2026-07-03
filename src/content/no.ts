@@ -88,7 +88,7 @@ export const no: Translation = {
       "TV og stue",
       "Badstue",
       "Terrasse",
-      "Ski inn / ski ut",
+      "Naturen rett utenfor døren",
       "Parkering til 4 biler",
     ],
   },
@@ -198,9 +198,9 @@ export const no: Translation = {
     {
       name: "Glekse",
       details:
-        "En kortere og mindre krevende tur enn Øysteinnatten, og passeres også på vei dit. Kalles Gleksefjell på turkartet som henger i stuen på hytta.",
+        "En tur på ca. 8–10 km tur-retur avhengig av rute. Mindre krevende enn Øysteinnatten, og passeres også på vei dit. Kalles Gleksefjell på turkartet som henger i stuen på hytta.",
       difficulty: "hike",
-      badge: "Kort tur",
+      badge: "Tur",
     },
     {
       name: "Tretoppen",

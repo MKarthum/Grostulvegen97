@@ -88,7 +88,7 @@ export const en: Translation = {
       "TV and living room",
       "Sauna",
       "Terrace",
-      "Ski in / ski out",
+      "Nature right outside your door",
       "Parking for 4 cars",
     ],
   },
@@ -198,9 +198,9 @@ export const en: Translation = {
     {
       name: "Glekse",
       details:
-        "A shorter and less demanding hike than Øysteinnatten, and also passed on the way there. Called Gleksefjell on the trail map hanging in the cabin's living room.",
+        "A hike of about 8–10 km round trip depending on the route. Less demanding than Øysteinnatten, and also passed on the way there. Called Gleksefjell on the trail map hanging in the cabin's living room.",
       difficulty: "hike",
-      badge: "Short hike",
+      badge: "Hike",
     },
     {
       name: "Tretoppen",

@@ -1,5 +1,5 @@
 import React from "react";
-import { BedDouble, Bath, ChefHat, Tv, Flame, Trees, Milestone, Car, Sparkles, Home } from "lucide-react";
+import { BedDouble, Bath, ChefHat, Tv, Flame, Trees, Mountain, Car, Sparkles, Home } from "lucide-react";
 import { CabinStats as CabinStatsType, StatsLabels } from "../content/types";
 
 interface CabinStatsProps {
@@ -24,8 +24,8 @@ export default function CabinStats({ stats, labels, title }: CabinStatsProps) {
     if (lowercase.includes("terrasse") || lowercase.includes("terrace")) {
       return <Trees className="w-5 h-5 text-cabin-accent" />;
     }
-    if (lowercase.includes("ski")) {
-      return <Milestone className="w-5 h-5 text-cabin-accent" />;
+    if (lowercase.includes("natur") || lowercase.includes("nature")) {
+      return <Mountain className="w-5 h-5 text-cabin-accent" />;
     }
     if (lowercase.includes("parkering") || lowercase.includes("parking")) {
       return <Car className="w-5 h-5 text-cabin-accent" />;
