@@ -20,7 +20,11 @@ export interface StatsLabels {
 }
 
 export interface BeforeArrivalInfo {
-  address: { label: string; value: string };
+  // navigationUrl is a fixed Google Maps link, not generated from `value`.
+  // Use this when the geocoded pin for the address text is wrong (e.g. a
+  // pending Google Maps correction) so the "Navigate" button still points
+  // guests to the correct spot.
+  address: { label: string; value: string; navigationUrl: string };
   checkIn: { label: string; value: string; caption: string };
   checkOut: { label: string; value: string; caption: string };
   parking: { label: string; value: string };

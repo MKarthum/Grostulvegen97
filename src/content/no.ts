@@ -99,6 +99,7 @@ export const no: Translation = {
     address: {
       label: "Adresse",
       value: "Grostulvegen 97, 3804 Bø i Telemark",
+      navigationUrl: "https://maps.app.goo.gl/zifFiwP2oXSN9xZAA",
     },
     checkIn: {
       label: "Innsjekk",

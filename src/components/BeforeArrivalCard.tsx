@@ -25,9 +25,6 @@ export default function BeforeArrivalCard({
     setTimeout(() => setCopiedAddress(false), 2000);
   };
 
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    info.address.value
-  )}`;
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -74,7 +71,7 @@ export default function BeforeArrivalCard({
 
           <a
             id="navigate-maps-link"
-            href={googleMapsUrl}
+            href={info.address.navigationUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-cabin-green hover:bg-cabin-green/85 border border-cabin-accent/20 active:scale-95 font-semibold text-sm text-white shadow-md transition-all cursor-pointer"
