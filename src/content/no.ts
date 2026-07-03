@@ -26,7 +26,6 @@ export const no: Translation = {
     arrival: "Ankomst",
     stay: "Under oppholdet",
     departure: "Avreise",
-    videos: "Videoer",
     contact: "Kontakt",
   },
 
@@ -62,7 +61,7 @@ export const no: Translation = {
 
   stayTitle: "Under oppholdet",
   stayEyebrow: "Praktisk informasjon",
-  utilitiesEyebrow: "Vann og strøm",
+  utilitiesEyebrow: "Vann",
   packingListEyebrow: "Pakkeliste",
   houseRulesEyebrow: "Husregler",
   localGuideEyebrow: "Lokal guide",
@@ -71,12 +70,7 @@ export const no: Translation = {
   stayVideosIntro: "Praktisk videohjelp til det dere trenger i løpet av oppholdet.",
 
   departureEyebrow: "Avreise",
-  departureVideosTitle: "Videoer for avreise",
-  departureVideosIntro: "Se disse før dere drar, så er dere sikre på at alt er i orden.",
 
-  videosTitle: "Videoinstruksjoner",
-  videosEyebrow: "Se og lær",
-  videosIntro: "Korte videoer som viser praktiske gjøremål på hytta.",
   watchVideoLabel: "Se video",
   openInYoutubeLabel: "Åpne i YouTube",
   videoComingSoonLabel: "Kommer snart",
@@ -155,7 +149,7 @@ export const no: Translation = {
       "Løft opp lokket inne i skapet. Der finner dere en blå spak.",
       "Vri spaken for å åpne vannet. Steng vannet ved å vri motsatt vei.",
     ],
-    videoIds: ["water-on"],
+    videoIds: ["water-on", "water-off"],
   },
   linen: {
     title: "Sengetøy og håndklær",

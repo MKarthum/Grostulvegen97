@@ -26,7 +26,6 @@ export const en: Translation = {
     arrival: "Arrival",
     stay: "During your stay",
     departure: "Departure",
-    videos: "Videos",
     contact: "Contact",
   },
 
@@ -62,7 +61,7 @@ export const en: Translation = {
 
   stayTitle: "During your stay",
   stayEyebrow: "Practical information",
-  utilitiesEyebrow: "Water and power",
+  utilitiesEyebrow: "Water",
   packingListEyebrow: "Packing list",
   houseRulesEyebrow: "House rules",
   localGuideEyebrow: "Local guide",
@@ -71,12 +70,7 @@ export const en: Translation = {
   stayVideosIntro: "Practical video help for things you'll need during your stay.",
 
   departureEyebrow: "Departure",
-  departureVideosTitle: "Departure videos",
-  departureVideosIntro: "Watch these before you leave to make sure everything is in order.",
 
-  videosTitle: "Video instructions",
-  videosEyebrow: "Watch and learn",
-  videosIntro: "Short videos showing practical tasks at the cabin.",
   watchVideoLabel: "Watch video",
   openInYoutubeLabel: "Open in YouTube",
   videoComingSoonLabel: "Coming soon",
@@ -155,7 +149,7 @@ export const en: Translation = {
       "Lift the lid inside the cabinet. You will find a blue lever.",
       "Turn the lever to turn the water on. Turn it the other way to turn it off.",
     ],
-    videoIds: ["water-on"],
+    videoIds: ["water-on", "water-off"],
   },
   linen: {
     title: "Bed linen and towels",

@@ -140,7 +140,6 @@ export interface NavLabels {
   arrival: string;
   stay: string;
   departure: string;
-  videos: string;
   contact: string;
 }
 
@@ -187,12 +186,7 @@ export interface Translation {
   stayVideosIntro: string;
 
   departureEyebrow: string;
-  departureVideosTitle: string;
-  departureVideosIntro: string;
 
-  videosTitle: string;
-  videosEyebrow: string;
-  videosIntro: string;
   watchVideoLabel: string;
   openInYoutubeLabel: string;
   videoComingSoonLabel: string;

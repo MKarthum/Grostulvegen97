@@ -24,7 +24,6 @@ import {
   ClipboardList,
   CheckSquare,
   PhoneCall,
-  PlayCircle,
   Compass as GuideIcon,
 } from "lucide-react";
 
@@ -50,7 +49,6 @@ export default function App() {
     { id: "ankomst", icon: <Key className="w-4 h-4" />, label: t.nav.arrival },
     { id: "opphold", icon: <ClipboardList className="w-4 h-4" />, label: t.nav.stay },
     { id: "avreise", icon: <CheckSquare className="w-4 h-4" />, label: t.nav.departure },
-    { id: "videoer", icon: <PlayCircle className="w-4 h-4" />, label: t.nav.videos },
     { id: "kontakt", icon: <PhoneCall className="w-4 h-4" />, label: t.nav.contact },
   ];
 
@@ -269,31 +267,9 @@ export default function App() {
           </div>
         </section>
 
-        {/* Section: Departure checklist + the videos most relevant when leaving */}
+        {/* Section: Departure checklist */}
         <section id="avreise" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <div className="space-y-8">
-            <InteractiveChecklist checklist={t.checklist} departureEyebrow={t.departureEyebrow} />
-            <VideoGuides
-              videos={findVideos(["water-off", "lock-door-outside", "washing-machine-water-off"])}
-              title={t.departureVideosTitle}
-              intro={t.departureVideosIntro}
-              watchVideoLabel={t.watchVideoLabel}
-              openInYoutubeLabel={t.openInYoutubeLabel}
-              videoComingSoonLabel={t.videoComingSoonLabel}
-            />
-          </div>
-        </section>
-
-        {/* Section: Video guides */}
-        <section id="videoer" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <VideoGuides
-            videos={t.videos}
-            title={t.videosTitle}
-            intro={t.videosIntro}
-            watchVideoLabel={t.watchVideoLabel}
-            openInYoutubeLabel={t.openInYoutubeLabel}
-            videoComingSoonLabel={t.videoComingSoonLabel}
-          />
+          <InteractiveChecklist checklist={t.checklist} departureEyebrow={t.departureEyebrow} />
         </section>
 
         {/* Section: Contact and emergency numbers */}
