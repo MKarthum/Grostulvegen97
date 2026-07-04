@@ -186,6 +186,7 @@ export const no: Translation = {
       "Bruk kun vanlig ved og opptenningsbriketter i peisen. Ikke brenn papp, papir, emballasje eller annet avfall.",
       "Vanlig strømforbruk er inkludert i leien. Vi ber likevel om at dere bruker strømmen fornuftig, og skrur ned varmen ved avreise slik det står i avreisesjekklisten.",
       "Lading av elbil er ikke inkludert som standard og må avtales med oss på forhånd.",
+      "De fleste lysbryterne på hytta gir svakt lys ved ett trykk. Ønsker dere fullt lys, slå bryteren av og raskt på igjen.",
     ],
   },
   blinds: {

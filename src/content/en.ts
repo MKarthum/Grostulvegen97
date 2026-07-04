@@ -186,6 +186,7 @@ export const en: Translation = {
       "Only use regular firewood and fire-starter briquettes in the fireplace. Do not burn cardboard, paper, packaging, or other waste.",
       "Normal electricity use is included in the rent. We still ask that you use electricity sensibly, and turn down the heating before departure as described in the departure checklist.",
       "Charging an electric vehicle is not included by default and must be agreed with us in advance.",
+      "Most of the light switches at the cabin give dim light with a single press. If you want full light, turn the switch off and quickly back on.",
     ],
   },
   blinds: {
