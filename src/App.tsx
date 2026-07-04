@@ -9,6 +9,7 @@ import WifiCard from "./components/WifiCard";
 import DoorInstructionsCard from "./components/DoorInstructionsCard";
 import WaterInstructionsCard from "./components/WaterInstructionsCard";
 import TvInstructionsCard from "./components/TvInstructionsCard";
+import QuookerCard from "./components/QuookerCard";
 import RulesAndLinen from "./components/RulesAndLinen";
 import InteractiveChecklist from "./components/InteractiveChecklist";
 import HikesAndTrips from "./components/HikesAndTrips";
@@ -247,6 +248,14 @@ export default function App() {
               videoComingSoonLabel={t.videoComingSoonLabel}
             />
             <TvInstructionsCard tv={t.tv} entertainmentEyebrow={t.entertainmentEyebrow} />
+            <QuookerCard
+              quooker={t.quooker}
+              kitchenEyebrow={t.kitchenEyebrow}
+              videos={findVideos(t.quooker.videoIds)}
+              watchVideoLabel={t.watchVideoLabel}
+              openInYoutubeLabel={t.openInYoutubeLabel}
+              videoComingSoonLabel={t.videoComingSoonLabel}
+            />
             <RulesAndLinen
               linen={t.linen}
               rules={t.rules}
@@ -265,13 +274,18 @@ export default function App() {
               localGuideEyebrow={t.localGuideEyebrow}
               visitWebsiteLabel={t.visitWebsiteLabel}
               hikesRegionLabel={t.hikesRegionLabel}
+              areaMapAlt={t.areaMapAlt}
             />
           </div>
         </section>
 
         {/* Section: Departure checklist */}
         <section id="avreise" className="scroll-mt-36 border-t border-white/5 pt-12">
-          <InteractiveChecklist checklist={t.checklist} departureEyebrow={t.departureEyebrow} />
+          <InteractiveChecklist
+            checklist={t.checklist}
+            departureEyebrow={t.departureEyebrow}
+            contactEmail={t.contact.questionsEmail.email}
+          />
         </section>
 
         {/* Section: Contact and emergency numbers */}

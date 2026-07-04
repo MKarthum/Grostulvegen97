@@ -65,6 +65,12 @@ export interface TvInstructions {
   streamingNote: string;
 }
 
+export interface QuookerInfo {
+  title: string;
+  paragraphs: string[];
+  videoIds: string[];
+}
+
 export interface LinenInfo {
   title: string;
   intro: string;
@@ -86,6 +92,17 @@ export interface DepartureChecklist {
   resetLabel: string;
   ofLabel: string;
   completedLabel: string;
+  sendButtonLabel: string;
+  sendHelperText: string;
+  emailSubject: string;
+  emailGreeting: string;
+  emailIntro: string;
+  emailCompletedLabel: string;
+  emailNoneCompleted: string;
+  emailUncheckedLabel: string;
+  emailNoneUnchecked: string;
+  emailClosing: string;
+  emailSignoff: string;
 }
 
 // Language-neutral category used only to pick a badge color.
@@ -186,6 +203,7 @@ export interface Translation {
   stayEyebrow: string;
   utilitiesEyebrow: string;
   entertainmentEyebrow: string;
+  kitchenEyebrow: string;
   packingListEyebrow: string;
   houseRulesEyebrow: string;
   localGuideEyebrow: string;
@@ -209,6 +227,7 @@ export interface Translation {
   door: DoorInstructions;
   water: WaterInstructions;
   tv: TvInstructions;
+  quooker: QuookerInfo;
   linen: LinenInfo;
   rules: HouseRules;
   checklist: DepartureChecklist;
@@ -221,6 +240,7 @@ export interface Translation {
   tripsSource: string;
   visitWebsiteLabel: string;
   hikesRegionLabel: string;
+  areaMapAlt: string;
   contact: ContactEmergency;
   videos: VideoGuide[];
 

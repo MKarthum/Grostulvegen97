@@ -63,6 +63,7 @@ export const en: Translation = {
   stayEyebrow: "Practical information",
   utilitiesEyebrow: "Water",
   entertainmentEyebrow: "Entertainment",
+  kitchenEyebrow: "Kitchen",
   packingListEyebrow: "Packing list",
   houseRulesEyebrow: "House rules",
   localGuideEyebrow: "Local guide",
@@ -167,6 +168,15 @@ export const en: Translation = {
     streamingNote:
       "Apple TV also has access to several streaming services. You can use the services already available, sign in with your own accounts, or stream from your phone to Apple TV. Please remember to sign out of any personal accounts before you leave.",
   },
+  quooker: {
+    title: "Quooker",
+    paragraphs: [
+      "The Quooker is the kitchen tap that can provide boiling water directly from the tap. It can be used for tea, cooking, and other situations where you would normally boil water. The tap has a child safety mechanism, so use it carefully and follow the markings on the tap.",
+      "If you do not want to use the Quooker, there is a regular kettle next to the coffee machine.",
+      "Remember to turn off the Quooker before departure if it has been used. See the separate video on this page for how to turn the Quooker tank on and off.",
+    ],
+    videoIds: ["quooker-on", "quooker-off"],
+  },
   linen: {
     title: "Bed linen and towels",
     intro: "Remember to bring the following items:",
@@ -189,10 +199,17 @@ export const en: Translation = {
       "Remove all rubbish from the cabin",
       "Turn off all lights",
       "Empty the fridge",
+      "Turn off the water. See the separate instructions and video on this page.",
+      "Empty the fireplace if it has been used. The ash vacuum is in the inside storage room and must only be used when the fireplace is completely cold. If the ash vacuum is full, cold ash can be emptied on the slope below the cabin.",
+      "Turn the heat down to 10°C on all 5 thermostats: downstairs bathroom, upstairs bathroom, living room, kitchen, and hallway.",
+      "Unplug the coffee machine and kettle. Empty the coffee filter as well.",
+      "Turn off the Quooker if it has been used.",
       "Vacuum the floors",
       "Wash the floors",
-      "Clean the bathroom and kitchen",
-      "Turn off the coffee machine",
+      "Clean the downstairs bathroom.",
+      "Clean the upstairs bathroom.",
+      "Clean the kitchen.",
+      "Check that all personal belongings are packed and taken with you.",
       "Close and lock all doors and windows (remember the front door handle)",
       "Feel free to take a few photos of the cabin before you leave, once tidying and cleaning are done. This is useful documentation for both you and us, and makes it easier to clarify anything afterwards if needed. The photos can be sent to the contact email listed on this page.",
     ],
@@ -202,6 +219,19 @@ export const en: Translation = {
     resetLabel: "Reset",
     ofLabel: "of",
     completedLabel: "completed",
+    sendButtonLabel: "Send departure checklist",
+    sendHelperText:
+      "The button opens a prefilled email. Feel free to attach photos of the cabin after tidying and cleaning before sending.",
+    emailSubject: "Departure checklist for Grostulvegen 97",
+    emailGreeting: "Hi,",
+    emailIntro: "We have gone through the departure checklist for Grostulvegen 97.",
+    emailCompletedLabel: "Completed items:",
+    emailNoneCompleted: "No items have been checked yet.",
+    emailUncheckedLabel: "Any items not checked:",
+    emailNoneUnchecked: "None",
+    emailClosing:
+      "We can attach photos of the cabin after tidying and cleaning as documentation of how it was left.",
+    emailSignoff: "Best regards",
   },
   hikes: [
     {
@@ -278,6 +308,7 @@ export const en: Translation = {
   tripsSource: "Sources: sommarland.no, bomuseum.no, our own Airbnb listing for the cabin.",
   visitWebsiteLabel: "Visit website",
   hikesRegionLabel: "Lifjell",
+  areaMapAlt: "Map of the local area around the cabin",
   videos: [
     {
       id: "key-box",
@@ -327,6 +358,20 @@ export const en: Translation = {
       description:
         "Shows how to open the damper before lighting the fire, use the door, and adjust the airflow while the fire is burning. The damper can be partly open once the fire is giving off good heat, but should only be closed fully when the fire is out and cold. Only burn firewood and fire-starter briquettes, never cardboard, paper, or other rubbish.",
       url: "https://youtube.com/shorts/kW1oQm3UYLg?feature=share",
+    },
+    {
+      id: "quooker-on",
+      title: "How to turn on the Quooker",
+      description:
+        "This video shows how to turn on the Quooker tank. Please note that it takes a few minutes after turning it on before the water is hot enough.",
+      url: "https://youtube.com/shorts/pQovaNyRSA0?feature=share",
+    },
+    {
+      id: "quooker-off",
+      title: "How to turn off the Quooker",
+      description:
+        "This video shows how to turn off the Quooker tank before departure. Remember to turn it off if it has been used during your stay.",
+      url: "https://youtube.com/shorts/947Oexg4kxc?feature=share",
     },
   ],
   contact: {

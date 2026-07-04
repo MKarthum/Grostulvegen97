@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Compass, Car, MapPin, ExternalLink, Mountain, Info } from "lucide-react";
 import { Hike, DayTrip, HikeDifficulty } from "../content/types";
+import areaMapImage from "../assets/images/area-map.jpg";
 
 interface HikesAndTripsProps {
   hikes: Hike[];
@@ -14,6 +15,7 @@ interface HikesAndTripsProps {
   localGuideEyebrow: string;
   visitWebsiteLabel: string;
   hikesRegionLabel: string;
+  areaMapAlt: string;
 }
 
 const badgeColors: Record<HikeDifficulty, string> = {
@@ -36,6 +38,7 @@ export default function HikesAndTrips({
   localGuideEyebrow,
   visitWebsiteLabel,
   hikesRegionLabel,
+  areaMapAlt,
 }: HikesAndTripsProps) {
   const [activeTab, setActiveTab] = useState<"hikes" | "trips">("hikes");
 
@@ -76,6 +79,15 @@ export default function HikesAndTrips({
             <span>{dayTripsTitle}</span>
           </button>
         </div>
+      </div>
+
+      {/* Area map */}
+      <div id="area-map-box" className="mb-6 rounded-2xl border border-white/10 overflow-hidden bg-white/5">
+        <img
+          src={areaMapImage}
+          alt={areaMapAlt}
+          className="w-full h-auto object-contain"
+        />
       </div>
 
       {/* Content */}

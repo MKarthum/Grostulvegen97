@@ -63,6 +63,7 @@ export const no: Translation = {
   stayEyebrow: "Praktisk informasjon",
   utilitiesEyebrow: "Vann",
   entertainmentEyebrow: "Underholdning",
+  kitchenEyebrow: "Kjøkken",
   packingListEyebrow: "Pakkeliste",
   houseRulesEyebrow: "Husregler",
   localGuideEyebrow: "Lokal guide",
@@ -167,6 +168,15 @@ export const no: Translation = {
     streamingNote:
       "Apple TV har også tilgang til flere strømmetjenester. Dere kan bruke dem som allerede er tilgjengelige, logge inn med egne kontoer, eller strømme fra mobil til Apple TV. Husk å logge ut av egne tjenester før avreise.",
   },
+  quooker: {
+    title: "Quooker",
+    paragraphs: [
+      "Quookeren er kranen på kjøkkenet som kan gi kokende vann direkte fra kranen. Den kan brukes til te, matlaging og annet der dere ellers ville kokt opp vann. Kranen har barnesikring, så bruk den rolig og følg merkingen på kranen.",
+      "Hvis dere ikke ønsker å bruke Quookeren, står det en vanlig vannkoker ved siden av kaffetrakteren.",
+      "Husk å slå av Quookeren før avreise dersom den har vært i bruk. Se egen video på siden for hvordan Quooker-beholderen slås av og på.",
+    ],
+    videoIds: ["quooker-on", "quooker-off"],
+  },
   linen: {
     title: "Sengetøy og håndklær",
     intro: "Husk å pakke med følgende:",
@@ -189,10 +199,17 @@ export const no: Translation = {
       "Fjern alt søppel fra hytta",
       "Skru av alle lys",
       "Tøm kjøleskapet",
+      "Steng vannet. Se egen rutine og video på siden.",
+      "Tøm peisen dersom den har vært i bruk. Askestøvsuger står i den innvendige boden og skal kun brukes når peisen er helt kald. Hvis askestøvsugeren blir full, kan kald aske tømmes i skråningen på nedsiden av hytta.",
+      "Skru ned varmen til 10 grader på alle 5 termostatene: bad nede, bad oppe, stue, kjøkken og gang.",
+      "Trekk ut strømmen til kaffemaskin og vannkoker. Tøm også kaffefilteret.",
+      "Slå av Quookeren dersom den har vært i bruk.",
       "Støvsug gulvene",
       "Vask gulvene",
-      "Rengjør bad og kjøkken",
-      "Slå av kaffemaskinen",
+      "Rengjør bad nede.",
+      "Rengjør bad oppe.",
+      "Rengjør kjøkken.",
+      "Sjekk at alle private eiendeler er pakket og tatt med.",
       "Lukk og lås alle dører og vinduer (husk håndtaket på hoveddøren)",
       "Ta gjerne noen bilder av hytta før dere drar, etter at rydding og utvask er ferdig. Det er nyttig dokumentasjon både for dere og oss, og gjør det enklere å avklare hvis noe skulle være uklart i etterkant. Bildene kan sendes til kontaktadressen på siden.",
     ],
@@ -202,6 +219,19 @@ export const no: Translation = {
     resetLabel: "Nullstill",
     ofLabel: "av",
     completedLabel: "utført",
+    sendButtonLabel: "Send avreisesjekkliste",
+    sendHelperText:
+      "Knappen åpner en ferdig utfylt e-post. Legg gjerne ved bilder av hytta etter rydding og utvask før dere sender.",
+    emailSubject: "Avreisesjekkliste for Grostulvegen 97",
+    emailGreeting: "Hei,",
+    emailIntro: "Vi har gått gjennom avreisesjekklisten for Grostulvegen 97.",
+    emailCompletedLabel: "Fullførte punkter:",
+    emailNoneCompleted: "Ingen punkter er huket av ennå.",
+    emailUncheckedLabel: "Eventuelle punkter som ikke er huket av:",
+    emailNoneUnchecked: "Ingen",
+    emailClosing:
+      "Vi legger gjerne ved bilder av hytta etter rydding og utvask som dokumentasjon på hvordan den ble forlatt.",
+    emailSignoff: "Hilsen",
   },
   hikes: [
     {
@@ -279,6 +309,7 @@ export const no: Translation = {
   tripsSource: "Kilder: sommarland.no, bomuseum.no, egen Airbnb-annonse for hytta.",
   visitWebsiteLabel: "Besøk nettside",
   hikesRegionLabel: "Lifjell",
+  areaMapAlt: "Kart over nærområdet rundt hytta",
   videos: [
     {
       id: "key-box",
@@ -328,6 +359,20 @@ export const no: Translation = {
       description:
         "Viser hvordan dere åpner spjeldet før opptenning, bruker luken og justerer trekk mens peisen brenner. Spjeldet kan stå delvis åpent når det er god varme, men skal først lukkes helt når peisen er sluknet og kald. Bruk kun ved og opptenningsbriketter, aldri papp, papir eller annet søppel.",
       url: "https://youtube.com/shorts/kW1oQm3UYLg?feature=share",
+    },
+    {
+      id: "quooker-on",
+      title: "Slik slår du på Quookeren",
+      description:
+        "Videoen viser hvordan du slår på Quooker-beholderen. Merk at det tar noen minutter fra den slås på til vannet er varmt nok.",
+      url: "https://youtube.com/shorts/pQovaNyRSA0?feature=share",
+    },
+    {
+      id: "quooker-off",
+      title: "Slik slår du av Quookeren",
+      description:
+        "Videoen viser hvordan du slår av Quooker-beholderen før avreise. Husk å slå den av dersom den har vært i bruk under oppholdet.",
+      url: "https://youtube.com/shorts/947Oexg4kxc?feature=share",
     },
   ],
   contact: {
