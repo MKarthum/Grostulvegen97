@@ -91,6 +91,10 @@ export interface LinenInfo {
 export interface HouseRules {
   title: string;
   rules: string[];
+  belongingsNote: {
+    title: string;
+    paragraphs: string[];
+  };
   thankYouNote: string;
 }
 

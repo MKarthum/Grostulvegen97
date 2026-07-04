@@ -209,6 +209,14 @@ export const en: Translation = {
       "No grilling on the terrace, but the gravel area outside works well",
       "Firewood is not included, but there is firewood at the cabin for moderate use",
     ],
+    belongingsNote: {
+      title: "Private cabin and personal belongings",
+      paragraphs: [
+        "This is a private cabin, so there will be personal belongings in some cupboards and drawers. We ask that you respect this.",
+        "Some cupboards and drawers, including storage under the beds, have been emptied and can be used during your stay.",
+        "There are also many games at the cabin. You are welcome to use them, but please treat them with care and put everything back neatly when you are done.",
+      ],
+    },
     thankYouNote: "Thank you for caring for our cabin!",
   },
   checklist: {

@@ -209,6 +209,14 @@ export const no: Translation = {
       "Grilling er ikke tillatt på terrassen, men det er god plass på grusen utenfor",
       "Ved følger ikke med, men det finnes ved på hytta til moderat bruk",
     ],
+    belongingsNote: {
+      title: "Privat hytte og personlige eiendeler",
+      paragraphs: [
+        "Dette er en privat hytte, og det vil derfor være private ting i enkelte skap og skuffer. Vi ber om at dette respekteres.",
+        "Noen skap og skuffer, blant annet under sengene, er tømt og kan brukes fritt under oppholdet.",
+        "Det finnes også mange spill på hytta. Disse må gjerne brukes, men behandles pent og ryddes tilbake på plass når dere er ferdige.",
+      ],
+    },
     thankYouNote: "Takk for at dere hjelper oss å ta vare på hytta!",
   },
   checklist: {

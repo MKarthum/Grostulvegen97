@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertCircle, FileText, Ban, Trash, HelpCircle, Shield, Wind, Sparkles } from "lucide-react";
+import { AlertCircle, FileText, Ban, Shield, Sparkles, Lock } from "lucide-react";
 import { LinenInfo, HouseRules } from "../content/types";
 
 interface RulesAndLinenProps {
@@ -87,6 +87,18 @@ export default function RulesAndLinen({ linen, rules, packingListEyebrow, houseR
                 <span className="text-sm font-semibold text-white leading-relaxed">{rule}</span>
               </div>
             ))}
+          </div>
+
+          <div className="mt-4 flex gap-3 p-4 bg-cabin-gold/5 border border-cabin-gold/20 rounded-2xl text-text-light text-sm leading-relaxed">
+            <Lock className="w-5 h-5 text-cabin-accent shrink-0 mt-0.5" />
+            <div className="space-y-2">
+              <p className="font-semibold text-white">{rules.belongingsNote.title}</p>
+              {rules.belongingsNote.paragraphs.map((paragraph, idx) => (
+                <p key={idx} className="text-text-dim">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
 
