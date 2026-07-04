@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { Maximize2, X } from "lucide-react";
 
 interface ExpandableImageProps {
@@ -15,10 +16,26 @@ interface ExpandableImageProps {
 
 export default function ExpandableImage({ src, alt, enlargeLabel, closeLabel, className, imgClassName }: ExpandableImageProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+
+  const close = () => {
+    setIsOpen(false);
+    triggerRef.current?.focus();
+  };
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
 
   return (
     <>
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setIsOpen(true)}
         aria-label={enlargeLabel}
@@ -30,27 +47,33 @@ export default function ExpandableImage({ src, alt, enlargeLabel, closeLabel, cl
         </span>
       </button>
 
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fade-in-up"
-          onClick={() => setIsOpen(false)}
-        >
-          <button
-            type="button"
-            onClick={() => setIsOpen(false)}
-            aria-label={closeLabel}
-            className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 rounded-xl p-2.5 cursor-pointer"
+      {isOpen &&
+        createPortal(
+          // Rendered into document.body: several cards use backdrop-blur,
+          // which (like transform/filter) creates a new containing block
+          // for position:fixed descendants. Without the portal, "fixed
+          // inset-0" would be confined to that card's box instead of the
+          // real viewport.
+          <div
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fade-in-up"
+            onClick={close}
           >
-            <X className="w-5 h-5" />
-          </button>
-          <img
-            src={src}
-            alt={alt}
-            className="max-w-full max-h-full object-contain rounded-xl"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+            <button
+              type="button"
+              onClick={close}
+              aria-label={closeLabel}
+              className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 rounded-xl p-2.5 cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <img
+              src={src}
+              alt={alt}
+              className="max-w-full max-h-full object-contain rounded-xl cursor-zoom-out"
+            />
+          </div>,
+          document.body
+        )}
     </>
   );
 }
