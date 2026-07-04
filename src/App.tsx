@@ -62,6 +62,17 @@ export default function App() {
     }
   }, [lang, t.metaDescription]);
 
+  // On a direct page load with a #hash in the URL, the browser tries to
+  // jump to that section before React has rendered it, so the native
+  // fragment scroll silently does nothing. Scroll to it ourselves once
+  // the page has rendered; scrollIntoView respects each section's
+  // scroll-mt offset the same way clicking a nav link does.
+  useEffect(() => {
+    if (!window.location.hash) return;
+    const el = document.getElementById(window.location.hash.slice(1));
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   // Look up video guides by id so instruction sections can embed the
   // matching video without duplicating its title/description anywhere.
   const findVideos = (ids: string[]): VideoGuide[] =>
@@ -77,13 +88,6 @@ export default function App() {
     { id: "avreise", icon: <CheckSquare className="w-4 h-4" />, label: t.nav.departure },
     { id: "kontakt", icon: <PhoneCall className="w-4 h-4" />, label: t.nav.contact },
   ];
-
-  const handleScrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-cabin-dark text-slate-100 pb-16 flex flex-col font-sans selection:bg-cabin-accent/20 selection:text-white">
@@ -165,15 +169,15 @@ export default function App() {
             {t.jumpToLabel}
           </span>
           {navItems.map((item) => (
-            <button
+            <a
               key={item.id}
               id={`jump-btn-${item.id}`}
-              onClick={() => handleScrollTo(item.id)}
+              href={`#${item.id}`}
               className="flex items-center gap-1.5 px-4 py-2 bg-white/5 hover:bg-white/10 text-text-light hover:text-white rounded-xl text-xs font-semibold border border-white/10 hover:border-cabin-accent/25 shadow-sm transition-all cursor-pointer"
             >
               {item.icon}
               <span>{item.label}</span>
-            </button>
+            </a>
           ))}
         </div>
       </div>
