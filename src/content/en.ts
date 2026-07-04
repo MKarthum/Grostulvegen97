@@ -426,4 +426,5 @@ export const en: Translation = {
   copiedLabel: "Copied!",
   copyLabel: "Copy",
   footerTagline: "Built with care for cabin renters.",
+  metaDescription: "Practical information for guests renting the cabin at Grostulvegen 97, Bø in Telemark.",
 };

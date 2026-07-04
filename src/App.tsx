@@ -31,14 +31,36 @@ import {
   Compass as GuideIcon,
 } from "lucide-react";
 
+const LANG_STORAGE_KEY = "grostulvegen_lang";
+
+function getStoredLang(): "no" | "en" {
+  try {
+    const saved = localStorage.getItem(LANG_STORAGE_KEY);
+    return saved === "no" || saved === "en" ? saved : "no";
+  } catch {
+    return "no";
+  }
+}
+
 export default function App() {
-  const [lang, setLang] = useState<"no" | "en">("no");
+  const [lang, setLang] = useState<"no" | "en">(getStoredLang);
   const t: Translation = translations[lang];
 
   useEffect(() => {
     document.documentElement.lang = lang;
     document.title = lang === "no" ? "Grostulvegen 97 – hytteguide" : "Grostulvegen 97 – cabin guide";
-  }, [lang]);
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", t.metaDescription);
+    }
+
+    try {
+      localStorage.setItem(LANG_STORAGE_KEY, lang);
+    } catch (e) {
+      console.warn("Storage failed", e);
+    }
+  }, [lang, t.metaDescription]);
 
   // Look up video guides by id so instruction sections can embed the
   // matching video without duplicating its title/description anywhere.

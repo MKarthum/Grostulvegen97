@@ -427,4 +427,5 @@ export const no: Translation = {
   copiedLabel: "Kopiert!",
   copyLabel: "Kopier",
   footerTagline: "Bygget med omtanke for hyttegjester.",
+  metaDescription: "Praktisk informasjon for leietakere av hytta på Grostulvegen 97, Bø i Telemark.",
 };

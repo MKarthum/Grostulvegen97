@@ -270,4 +270,5 @@ export interface Translation {
   copiedLabel: string;
   copyLabel: string;
   footerTagline: string;
+  metaDescription: string;
 }
