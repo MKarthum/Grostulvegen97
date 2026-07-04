@@ -65,6 +65,7 @@ export const no: Translation = {
   entertainmentEyebrow: "Underholdning",
   kitchenEyebrow: "Kjøkken",
   firewoodEyebrow: "Ved og strøm",
+  blindsEyebrow: "Persienner",
   packingListEyebrow: "Pakkeliste",
   houseRulesEyebrow: "Husregler",
   localGuideEyebrow: "Lokal guide",
@@ -187,6 +188,13 @@ export const no: Translation = {
       "Lading av elbil er ikke inkludert som standard og må avtales med oss på forhånd.",
     ],
   },
+  blinds: {
+    title: "Persienner og fukt i vinduskarmene",
+    paragraphs: [
+      "Trekk for persiennene når dere reiser fra hytta. For å unngå at det blir for varmt mellom persienne og vindusglass, bør det være en liten glippe på noen få cm både øverst og nederst.",
+      "Hvis det samler seg mye fuktighet i vinduskarmene under oppholdet, er det fint om dette tørkes av jevnlig, og spesielt før avreise.",
+    ],
+  },
   linen: {
     title: "Sengetøy og håndklær",
     intro: "Husk å pakke med følgende:",
@@ -220,6 +228,7 @@ export const no: Translation = {
       "Rengjør bad oppe.",
       "Rengjør kjøkken.",
       "Sjekk at alle private eiendeler er pakket og tatt med.",
+      "Trekk for alle persienner før avreise. La det være en liten glippe på noen få cm både øverst og nederst, slik at det ikke bygger seg opp for mye varme mellom persienne og glass.",
       "Lukk og lås alle dører og vinduer (husk håndtaket på hoveddøren)",
       "Ta gjerne noen bilder av hytta før dere drar, etter at rydding og utvask er ferdig. Det er nyttig dokumentasjon både for dere og oss, og gjør det enklere å avklare hvis noe skulle være uklart i etterkant. Bildene kan sendes til kontaktadressen på siden.",
     ],

@@ -11,6 +11,7 @@ import WaterInstructionsCard from "./components/WaterInstructionsCard";
 import TvInstructionsCard from "./components/TvInstructionsCard";
 import QuookerCard from "./components/QuookerCard";
 import FirewoodPowerCard from "./components/FirewoodPowerCard";
+import BlindsCard from "./components/BlindsCard";
 import RulesAndLinen from "./components/RulesAndLinen";
 import InteractiveChecklist from "./components/InteractiveChecklist";
 import HikesAndTrips from "./components/HikesAndTrips";
@@ -252,6 +253,7 @@ export default function App() {
               videoComingSoonLabel={t.videoComingSoonLabel}
             />
             <FirewoodPowerCard firewoodPower={t.firewoodPower} firewoodEyebrow={t.firewoodEyebrow} />
+            <BlindsCard blinds={t.blinds} blindsEyebrow={t.blindsEyebrow} />
             <TvInstructionsCard tv={t.tv} entertainmentEyebrow={t.entertainmentEyebrow} />
             <QuookerCard
               quooker={t.quooker}

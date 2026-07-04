@@ -65,6 +65,7 @@ export const en: Translation = {
   entertainmentEyebrow: "Entertainment",
   kitchenEyebrow: "Kitchen",
   firewoodEyebrow: "Firewood and power",
+  blindsEyebrow: "Blinds",
   packingListEyebrow: "Packing list",
   houseRulesEyebrow: "House rules",
   localGuideEyebrow: "Local guide",
@@ -187,6 +188,13 @@ export const en: Translation = {
       "Charging an electric vehicle is not included by default and must be agreed with us in advance.",
     ],
   },
+  blinds: {
+    title: "Blinds and moisture in the window frames",
+    paragraphs: [
+      "Please close the blinds when you leave the cabin. To avoid too much heat building up between the blind and the window glass, leave a small gap of a few centimetres at both the top and bottom.",
+      "If a lot of moisture collects in the window frames during your stay, please wipe it off regularly, and especially before departure.",
+    ],
+  },
   linen: {
     title: "Bed linen and towels",
     intro: "Remember to bring the following items:",
@@ -220,6 +228,7 @@ export const en: Translation = {
       "Clean the upstairs bathroom.",
       "Clean the kitchen.",
       "Check that all personal belongings are packed and taken with you.",
+      "Close all blinds before departure. Leave a small gap of a few centimetres at both the top and bottom, to reduce heat build-up between the blind and the glass.",
       "Close and lock all doors and windows (remember the front door handle)",
       "Feel free to take a few photos of the cabin before you leave, once tidying and cleaning are done. This is useful documentation for both you and us, and makes it easier to clarify anything afterwards if needed. The photos can be sent to the contact email listed on this page.",
     ],

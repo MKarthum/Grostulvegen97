@@ -76,6 +76,11 @@ export interface FirewoodPowerInfo {
   paragraphs: string[];
 }
 
+export interface BlindsInfo {
+  title: string;
+  paragraphs: string[];
+}
+
 export interface LinenInfo {
   title: string;
   intro: string;
@@ -210,6 +215,7 @@ export interface Translation {
   entertainmentEyebrow: string;
   kitchenEyebrow: string;
   firewoodEyebrow: string;
+  blindsEyebrow: string;
   packingListEyebrow: string;
   houseRulesEyebrow: string;
   localGuideEyebrow: string;
@@ -235,6 +241,7 @@ export interface Translation {
   tv: TvInstructions;
   quooker: QuookerInfo;
   firewoodPower: FirewoodPowerInfo;
+  blinds: BlindsInfo;
   linen: LinenInfo;
   rules: HouseRules;
   checklist: DepartureChecklist;
