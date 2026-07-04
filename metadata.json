@@ -1,6 +1,0 @@
-{
-  "name": "Grostulvegen 97",
-  "description": "Praktisk og hyggelig informasjon for leietakere av hytta på Grostulvegen 97 (Norsk og Engelsk).",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
