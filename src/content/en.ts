@@ -149,7 +149,7 @@ export const en: Translation = {
   water: {
     title: "Water, turning it on and off",
     steps: [
-      "Open the cabinet in the shed. It is not key locked, but has a twist lock you can open with, for example, a screwdriver.",
+      "Open the cabinet in the shed to the right of the front door. It is not key locked, but has a twist lock you can open with, for example, a screwdriver.",
       "Lift the lid inside the cabinet. You will find a blue lever.",
       "Turn the lever to turn the water on. Turn it the other way to turn it off.",
     ],
@@ -227,7 +227,7 @@ export const en: Translation = {
       "Turn off all lights.",
       "Empty the fridge.",
       "Turn off the water. See the separate instructions and video on this page.",
-      "Empty the fireplace if it has been used. The ash vacuum is in the inside storage room and must only be used when the fireplace is completely cold. If the ash vacuum is full, cold ash can be emptied on the slope below the cabin.",
+      "Empty the fireplace if it has been used. The ash vacuum is in the storage room under the stairs and must only be used when the fireplace is completely cold. If the ash vacuum is full, cold ash can be emptied on the slope below the cabin.",
       "Turn the heat down to 10°C on all 5 thermostats: downstairs bathroom, upstairs bathroom, living room, kitchen, and hallway.",
       "Unplug the coffee machine and kettle. Empty the coffee filter as well.",
       "Turn off the Quooker if it has been used.",
@@ -421,6 +421,7 @@ export const en: Translation = {
     police: { number: "112", label: "Police" },
     ambulance: { number: "113", label: "Ambulance" },
     callLabel: "Call",
+    safetyNote: "The fire extinguisher is in the storage room under the stairs. You'll also find cleaning equipment there.",
     hostFooterNote: "Privately owned and managed by the host.",
   },
 

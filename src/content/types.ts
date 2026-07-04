@@ -159,6 +159,7 @@ export interface ContactEmergency {
   police: EmergencyContact;
   ambulance: EmergencyContact;
   callLabel: string;
+  safetyNote: string;
   hostFooterNote: string;
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, ShieldAlert, Sparkles, PhoneCall } from "lucide-react";
+import { Mail, Phone, ShieldAlert, Sparkles, PhoneCall, FireExtinguisher } from "lucide-react";
 import { ContactEmergency } from "../content/types";
 
 interface ContactEmergencyCardProps {
@@ -118,6 +118,11 @@ export default function ContactEmergencyCard({ contact, welcomeMessage, welcomeE
               <span>{contact.callLabel} {contact.doctor.label}</span>
             </a>
           </div>
+        </div>
+
+        <div id="fire-safety-note" className="mt-4 flex gap-3 p-4 bg-red-950/30 border border-red-900/20 rounded-2xl text-text-light text-sm leading-relaxed">
+          <FireExtinguisher className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+          <p>{contact.safetyNote}</p>
         </div>
       </div>
     </div>

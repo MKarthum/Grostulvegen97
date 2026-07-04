@@ -149,7 +149,7 @@ export const no: Translation = {
   water: {
     title: "Vann, åpne og stenge",
     steps: [
-      "Åpne skapet i boden. Det er ikke låst med nøkkel, men har en vrilås som åpnes med for eksempel en skrutrekker.",
+      "Åpne skapet i boden til høyre for hoveddøren. Det er ikke låst med nøkkel, men har en vrilås som åpnes med for eksempel en skrutrekker.",
       "Løft opp lokket inne i skapet. Der finner dere en blå spak.",
       "Vri spaken for å åpne vannet. Steng vannet ved å vri motsatt vei.",
     ],
@@ -227,7 +227,7 @@ export const no: Translation = {
       "Skru av alle lys.",
       "Tøm kjøleskapet.",
       "Steng vannet. Se egen rutine og video på siden.",
-      "Tøm peisen dersom den har vært i bruk. Askestøvsuger står i den innvendige boden og skal kun brukes når peisen er helt kald. Hvis askestøvsugeren blir full, kan kald aske tømmes i skråningen på nedsiden av hytta.",
+      "Tøm peisen dersom den har vært i bruk. Askestøvsuger står i boden under trappen og skal kun brukes når peisen er helt kald. Hvis askestøvsugeren blir full, kan kald aske tømmes i skråningen på nedsiden av hytta.",
       "Skru ned varmen til 10 grader på alle 5 termostatene: bad nede, bad oppe, stue, kjøkken og gang.",
       "Trekk ut strømmen til kaffemaskin og vannkoker. Tøm også kaffefilteret.",
       "Slå av Quookeren dersom den har vært i bruk.",
@@ -422,6 +422,7 @@ export const no: Translation = {
     police: { number: "112", label: "Politi" },
     ambulance: { number: "113", label: "Ambulanse" },
     callLabel: "Ring",
+    safetyNote: "Brannslukningsapparat står i boden under trappen. Der finner dere også vaskeutstyr.",
     hostFooterNote: "Eies og drives privat, av vertskapet.",
   },
 
