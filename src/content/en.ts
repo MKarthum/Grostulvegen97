@@ -207,7 +207,7 @@ export const en: Translation = {
       "No pets",
       "No smoking",
       "No grilling on the terrace, but the gravel area outside works well",
-      "Firewood is not included, but there is firewood at the cabin for moderate use",
+      "Firewood is not included, but there is firewood at the cabin for moderate use. See pricing information under \"Firewood, electricity and EV charging\" in During your stay.",
     ],
     belongingsNote: {
       title: "Private cabin and personal belongings",
@@ -337,6 +337,8 @@ export const en: Translation = {
   hikesRegionLabel: "Lifjell",
   areaMapAlt: "Map of the local area around the cabin",
   skiTrailsMapAlt: "Map of ski trails and hiking routes in the area",
+  skiMapCardTitle: "Map of the local area",
+  skiMapCardDescription: "This map shows the local area around the cabin and can be useful for getting oriented before trips on Lifjell.",
   enlargeImageLabel: "Click to enlarge",
   closeLabel: "Close",
   videos: [

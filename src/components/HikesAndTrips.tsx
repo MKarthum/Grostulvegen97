@@ -17,6 +17,8 @@ interface HikesAndTripsProps {
   visitWebsiteLabel: string;
   hikesRegionLabel: string;
   skiTrailsMapAlt: string;
+  skiMapCardTitle: string;
+  skiMapCardDescription: string;
   enlargeImageLabel: string;
   closeLabel: string;
 }
@@ -42,6 +44,8 @@ export default function HikesAndTrips({
   visitWebsiteLabel,
   hikesRegionLabel,
   skiTrailsMapAlt,
+  skiMapCardTitle,
+  skiMapCardDescription,
   enlargeImageLabel,
   closeLabel,
 }: HikesAndTripsProps) {
@@ -84,16 +88,6 @@ export default function HikesAndTrips({
             <span>{dayTripsTitle}</span>
           </button>
         </div>
-      </div>
-
-      {/* Area map */}
-      <div id="ski-trails-map-box" className="mb-6">
-        <ExpandableImage
-          src={skiTrailsMapImage}
-          alt={skiTrailsMapAlt}
-          enlargeLabel={enlargeImageLabel}
-          closeLabel={closeLabel}
-        />
       </div>
 
       {/* Content */}
@@ -142,6 +136,27 @@ export default function HikesAndTrips({
                 </div>
               </div>
             ))}
+
+            {/* Local area map, shown as a normal card in this grid (hikes only, not day trips) */}
+            <div
+              id="ski-map-card"
+              className="flex flex-col justify-between p-5 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/5 hover:border-cabin-accent/20 transition-all duration-300 shadow-sm group"
+            >
+              <div>
+                <ExpandableImage
+                  src={skiTrailsMapImage}
+                  alt={skiTrailsMapAlt}
+                  enlargeLabel={enlargeImageLabel}
+                  closeLabel={closeLabel}
+                  className="mb-3"
+                  imgClassName="w-full h-32 object-cover"
+                />
+                <h4 className="text-lg font-bold text-white group-hover:text-cabin-accent transition-colors mb-1">
+                  {skiMapCardTitle}
+                </h4>
+                <p className="text-sm text-text-dim leading-relaxed font-medium">{skiMapCardDescription}</p>
+              </div>
+            </div>
           </div>
 
           <div id="hikes-footer" className="mt-6 space-y-2">

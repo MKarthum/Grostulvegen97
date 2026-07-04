@@ -7,9 +7,13 @@ interface ExpandableImageProps {
   enlargeLabel: string;
   closeLabel: string;
   className?: string;
+  // Overrides the thumbnail <img> sizing (e.g. a fixed height + object-cover
+  // for a compact card preview). The enlarged lightbox always shows the
+  // full, uncropped image regardless of this prop.
+  imgClassName?: string;
 }
 
-export default function ExpandableImage({ src, alt, enlargeLabel, closeLabel, className }: ExpandableImageProps) {
+export default function ExpandableImage({ src, alt, enlargeLabel, closeLabel, className, imgClassName }: ExpandableImageProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -20,7 +24,7 @@ export default function ExpandableImage({ src, alt, enlargeLabel, closeLabel, cl
         aria-label={enlargeLabel}
         className={`relative block w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5 cursor-zoom-in group ${className ?? ""}`}
       >
-        <img src={src} alt={alt} className="w-full h-auto object-contain" />
+        <img src={src} alt={alt} className={imgClassName ?? "w-full h-auto object-contain"} />
         <span className="absolute bottom-2 right-2 flex items-center gap-1.5 bg-black/60 group-hover:bg-black/80 text-white text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-colors">
           <Maximize2 className="w-3.5 h-3.5" />
         </span>

@@ -282,6 +282,8 @@ export default function App() {
               visitWebsiteLabel={t.visitWebsiteLabel}
               hikesRegionLabel={t.hikesRegionLabel}
               skiTrailsMapAlt={t.skiTrailsMapAlt}
+              skiMapCardTitle={t.skiMapCardTitle}
+              skiMapCardDescription={t.skiMapCardDescription}
               enlargeImageLabel={t.enlargeImageLabel}
               closeLabel={t.closeLabel}
             />

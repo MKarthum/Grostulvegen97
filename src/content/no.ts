@@ -207,7 +207,7 @@ export const no: Translation = {
       "Ingen dyr",
       "Ingen røyking",
       "Grilling er ikke tillatt på terrassen, men det er god plass på grusen utenfor",
-      "Ved følger ikke med, men det finnes ved på hytta til moderat bruk",
+      "Ved følger ikke med, men det finnes ved på hytta til moderat bruk. Se prisinformasjon under «Ved, strøm og elbillading» i Under oppholdet.",
     ],
     belongingsNote: {
       title: "Privat hytte og personlige eiendeler",
@@ -338,6 +338,8 @@ export const no: Translation = {
   hikesRegionLabel: "Lifjell",
   areaMapAlt: "Kart over nærområdet rundt hytta",
   skiTrailsMapAlt: "Kart over skiløyper og turer i området",
+  skiMapCardTitle: "Kart over nærområdet",
+  skiMapCardDescription: "Kartet viser nærområdet rundt hytta og kan være nyttig for å orientere seg før turer på Lifjell.",
   enlargeImageLabel: "Klikk for å forstørre",
   closeLabel: "Lukk",
   videos: [

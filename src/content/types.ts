@@ -260,6 +260,8 @@ export interface Translation {
   hikesRegionLabel: string;
   areaMapAlt: string;
   skiTrailsMapAlt: string;
+  skiMapCardTitle: string;
+  skiMapCardDescription: string;
   enlargeImageLabel: string;
   closeLabel: string;
   contact: ContactEmergency;
