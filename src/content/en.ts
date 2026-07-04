@@ -194,6 +194,7 @@ export const en: Translation = {
       "Clean the bathroom and kitchen",
       "Turn off the coffee machine",
       "Close and lock all doors and windows (remember the front door handle)",
+      "Feel free to take a few photos of the cabin before you leave, once tidying and cleaning are done. This is useful documentation for both you and us, and makes it easier to clarify anything afterwards if needed. The photos can be sent to the contact email listed on this page.",
     ],
     importantLabel: "Important",
     importantNote:

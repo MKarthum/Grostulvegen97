@@ -194,6 +194,7 @@ export const no: Translation = {
       "Rengjør bad og kjøkken",
       "Slå av kaffemaskinen",
       "Lukk og lås alle dører og vinduer (husk håndtaket på hoveddøren)",
+      "Ta gjerne noen bilder av hytta før dere drar, etter at rydding og utvask er ferdig. Det er nyttig dokumentasjon både for dere og oss, og gjør det enklere å avklare hvis noe skulle være uklart i etterkant. Bildene kan sendes til kontaktadressen på siden.",
     ],
     importantLabel: "Viktig",
     importantNote:
