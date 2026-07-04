@@ -341,7 +341,7 @@ export default function App() {
       <footer className="mt-24 border-t border-white/5 bg-white/2 py-12 px-4 sm:px-6 lg:px-8 text-center text-text-dim text-xs font-mono">
         <div className="max-w-7xl mx-auto space-y-2">
           <p className="text-cabin-accent font-semibold font-sans">{t.beforeArrival.address.value}</p>
-          <p>© 2026 {t.heroTitle} — {t.footerTagline}</p>
+          <p>© {new Date().getFullYear()} {t.heroTitle} — {t.footerTagline}</p>
         </div>
       </footer>
     </div>
