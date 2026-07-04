@@ -71,6 +71,11 @@ export interface QuookerInfo {
   videoIds: string[];
 }
 
+export interface FirewoodPowerInfo {
+  title: string;
+  paragraphs: string[];
+}
+
 export interface LinenInfo {
   title: string;
   intro: string;
@@ -204,6 +209,7 @@ export interface Translation {
   utilitiesEyebrow: string;
   entertainmentEyebrow: string;
   kitchenEyebrow: string;
+  firewoodEyebrow: string;
   packingListEyebrow: string;
   houseRulesEyebrow: string;
   localGuideEyebrow: string;
@@ -228,6 +234,7 @@ export interface Translation {
   water: WaterInstructions;
   tv: TvInstructions;
   quooker: QuookerInfo;
+  firewoodPower: FirewoodPowerInfo;
   linen: LinenInfo;
   rules: HouseRules;
   checklist: DepartureChecklist;
@@ -241,6 +248,9 @@ export interface Translation {
   visitWebsiteLabel: string;
   hikesRegionLabel: string;
   areaMapAlt: string;
+  skiTrailsMapAlt: string;
+  enlargeImageLabel: string;
+  closeLabel: string;
   contact: ContactEmergency;
   videos: VideoGuide[];
 

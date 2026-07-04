@@ -1,0 +1,52 @@
+import React, { useState } from "react";
+import { Maximize2, X } from "lucide-react";
+
+interface ExpandableImageProps {
+  src: string;
+  alt: string;
+  enlargeLabel: string;
+  closeLabel: string;
+  className?: string;
+}
+
+export default function ExpandableImage({ src, alt, enlargeLabel, closeLabel, className }: ExpandableImageProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setIsOpen(true)}
+        aria-label={enlargeLabel}
+        className={`relative block w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5 cursor-zoom-in group ${className ?? ""}`}
+      >
+        <img src={src} alt={alt} className="w-full h-auto object-contain" />
+        <span className="absolute bottom-2 right-2 flex items-center gap-1.5 bg-black/60 group-hover:bg-black/80 text-white text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-colors">
+          <Maximize2 className="w-3.5 h-3.5" />
+        </span>
+      </button>
+
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fade-in-up"
+          onClick={() => setIsOpen(false)}
+        >
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            aria-label={closeLabel}
+            className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 rounded-xl p-2.5 cursor-pointer"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          <img
+            src={src}
+            alt={alt}
+            className="max-w-full max-h-full object-contain rounded-xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </>
+  );
+}

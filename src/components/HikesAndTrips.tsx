@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Compass, Car, MapPin, ExternalLink, Mountain, Info } from "lucide-react";
 import { Hike, DayTrip, HikeDifficulty } from "../content/types";
-import areaMapImage from "../assets/images/area-map.jpg";
+import ExpandableImage from "./ExpandableImage";
+import skiTrailsMapImage from "../assets/images/ski-trails-map.jpg";
 
 interface HikesAndTripsProps {
   hikes: Hike[];
@@ -15,7 +16,9 @@ interface HikesAndTripsProps {
   localGuideEyebrow: string;
   visitWebsiteLabel: string;
   hikesRegionLabel: string;
-  areaMapAlt: string;
+  skiTrailsMapAlt: string;
+  enlargeImageLabel: string;
+  closeLabel: string;
 }
 
 const badgeColors: Record<HikeDifficulty, string> = {
@@ -38,7 +41,9 @@ export default function HikesAndTrips({
   localGuideEyebrow,
   visitWebsiteLabel,
   hikesRegionLabel,
-  areaMapAlt,
+  skiTrailsMapAlt,
+  enlargeImageLabel,
+  closeLabel,
 }: HikesAndTripsProps) {
   const [activeTab, setActiveTab] = useState<"hikes" | "trips">("hikes");
 
@@ -82,11 +87,12 @@ export default function HikesAndTrips({
       </div>
 
       {/* Area map */}
-      <div id="area-map-box" className="mb-6 rounded-2xl border border-white/10 overflow-hidden bg-white/5">
-        <img
-          src={areaMapImage}
-          alt={areaMapAlt}
-          className="w-full h-auto object-contain"
+      <div id="ski-trails-map-box" className="mb-6">
+        <ExpandableImage
+          src={skiTrailsMapImage}
+          alt={skiTrailsMapAlt}
+          enlargeLabel={enlargeImageLabel}
+          closeLabel={closeLabel}
         />
       </div>
 

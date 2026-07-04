@@ -64,6 +64,7 @@ export const en: Translation = {
   utilitiesEyebrow: "Water",
   entertainmentEyebrow: "Entertainment",
   kitchenEyebrow: "Kitchen",
+  firewoodEyebrow: "Firewood and power",
   packingListEyebrow: "Packing list",
   houseRulesEyebrow: "House rules",
   localGuideEyebrow: "Local guide",
@@ -176,6 +177,15 @@ export const en: Translation = {
       "Remember to turn off the Quooker before departure if it has been used. See the separate video on this page for how to turn the Quooker tank on and off.",
     ],
     videoIds: ["quooker-on", "quooker-off"],
+  },
+  firewoodPower: {
+    title: "Firewood, electricity and EV charging",
+    paragraphs: [
+      "There are some 60-litre bags of firewood at the cabin that may be used if needed. The price is NOK 150 per bag. Payment for firewood and other agreed extra costs can be made to account number 9044.13.37247.",
+      "Only use regular firewood and fire-starter briquettes in the fireplace. Do not burn cardboard, paper, packaging, or other waste.",
+      "Normal electricity use is included in the rent. We still ask that you use electricity sensibly, and turn down the heating before departure as described in the departure checklist.",
+      "Charging an electric vehicle is not included by default and must be agreed with us in advance.",
+    ],
   },
   linen: {
     title: "Bed linen and towels",
@@ -309,6 +319,9 @@ export const en: Translation = {
   visitWebsiteLabel: "Visit website",
   hikesRegionLabel: "Lifjell",
   areaMapAlt: "Map of the local area around the cabin",
+  skiTrailsMapAlt: "Map of ski trails and hiking routes in the area",
+  enlargeImageLabel: "Click to enlarge",
+  closeLabel: "Close",
   videos: [
     {
       id: "key-box",

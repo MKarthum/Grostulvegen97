@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { MapPin, Clock, Car, Copy, Check, Navigation, PhoneCall } from "lucide-react";
 import { BeforeArrivalInfo } from "../content/types";
+import ExpandableImage from "./ExpandableImage";
+import areaMapImage from "../assets/images/area-map.jpg";
 
 interface BeforeArrivalCardProps {
   info: BeforeArrivalInfo;
@@ -10,6 +12,9 @@ interface BeforeArrivalCardProps {
   navigateAppleLabel: string;
   navigationNote: string;
   destinationEyebrow: string;
+  areaMapAlt: string;
+  enlargeImageLabel: string;
+  closeLabel: string;
 }
 
 export default function BeforeArrivalCard({
@@ -20,6 +25,9 @@ export default function BeforeArrivalCard({
   navigateAppleLabel,
   navigationNote,
   destinationEyebrow,
+  areaMapAlt,
+  enlargeImageLabel,
+  closeLabel,
 }: BeforeArrivalCardProps) {
   const [copiedAddress, setCopiedAddress] = useState(false);
 
@@ -100,6 +108,15 @@ export default function BeforeArrivalCard({
         <p id="navigation-note" className="mt-3 text-xs text-text-dim leading-relaxed">
           {navigationNote}
         </p>
+
+        <div id="area-map-box" className="mt-4 max-w-[220px]">
+          <ExpandableImage
+            src={areaMapImage}
+            alt={areaMapAlt}
+            enlargeLabel={enlargeImageLabel}
+            closeLabel={closeLabel}
+          />
+        </div>
       </div>
 
       {/* Checking & Parking Times */}

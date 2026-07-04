@@ -10,6 +10,7 @@ import DoorInstructionsCard from "./components/DoorInstructionsCard";
 import WaterInstructionsCard from "./components/WaterInstructionsCard";
 import TvInstructionsCard from "./components/TvInstructionsCard";
 import QuookerCard from "./components/QuookerCard";
+import FirewoodPowerCard from "./components/FirewoodPowerCard";
 import RulesAndLinen from "./components/RulesAndLinen";
 import InteractiveChecklist from "./components/InteractiveChecklist";
 import HikesAndTrips from "./components/HikesAndTrips";
@@ -181,6 +182,9 @@ export default function App() {
             navigateAppleLabel={t.navigateAppleLabel}
             navigationNote={t.navigationNote}
             destinationEyebrow={t.destinationEyebrow}
+            areaMapAlt={t.areaMapAlt}
+            enlargeImageLabel={t.enlargeImageLabel}
+            closeLabel={t.closeLabel}
           />
         </section>
 
@@ -247,6 +251,7 @@ export default function App() {
               openInYoutubeLabel={t.openInYoutubeLabel}
               videoComingSoonLabel={t.videoComingSoonLabel}
             />
+            <FirewoodPowerCard firewoodPower={t.firewoodPower} firewoodEyebrow={t.firewoodEyebrow} />
             <TvInstructionsCard tv={t.tv} entertainmentEyebrow={t.entertainmentEyebrow} />
             <QuookerCard
               quooker={t.quooker}
@@ -274,7 +279,9 @@ export default function App() {
               localGuideEyebrow={t.localGuideEyebrow}
               visitWebsiteLabel={t.visitWebsiteLabel}
               hikesRegionLabel={t.hikesRegionLabel}
-              areaMapAlt={t.areaMapAlt}
+              skiTrailsMapAlt={t.skiTrailsMapAlt}
+              enlargeImageLabel={t.enlargeImageLabel}
+              closeLabel={t.closeLabel}
             />
           </div>
         </section>

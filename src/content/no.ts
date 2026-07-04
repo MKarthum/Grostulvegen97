@@ -64,6 +64,7 @@ export const no: Translation = {
   utilitiesEyebrow: "Vann",
   entertainmentEyebrow: "Underholdning",
   kitchenEyebrow: "Kjøkken",
+  firewoodEyebrow: "Ved og strøm",
   packingListEyebrow: "Pakkeliste",
   houseRulesEyebrow: "Husregler",
   localGuideEyebrow: "Lokal guide",
@@ -176,6 +177,15 @@ export const no: Translation = {
       "Husk å slå av Quookeren før avreise dersom den har vært i bruk. Se egen video på siden for hvordan Quooker-beholderen slås av og på.",
     ],
     videoIds: ["quooker-on", "quooker-off"],
+  },
+  firewoodPower: {
+    title: "Ved, strøm og elbillading",
+    paragraphs: [
+      "Det ligger noen 60-liters vedsekker på hytta som kan brukes ved behov. Pris er 150 kr per sekk. Betaling for ved og andre avtalte ekstrautgifter gjøres til kontonummer 9044.13.37247.",
+      "Bruk kun vanlig ved og opptenningsbriketter i peisen. Ikke brenn papp, papir, emballasje eller annet avfall.",
+      "Vanlig strømforbruk er inkludert i leien. Vi ber likevel om at dere bruker strømmen fornuftig, og skrur ned varmen ved avreise slik det står i avreisesjekklisten.",
+      "Lading av elbil er ikke inkludert som standard og må avtales med oss på forhånd.",
+    ],
   },
   linen: {
     title: "Sengetøy og håndklær",
@@ -310,6 +320,9 @@ export const no: Translation = {
   visitWebsiteLabel: "Besøk nettside",
   hikesRegionLabel: "Lifjell",
   areaMapAlt: "Kart over nærområdet rundt hytta",
+  skiTrailsMapAlt: "Kart over skiløyper og turer i området",
+  enlargeImageLabel: "Klikk for å forstørre",
+  closeLabel: "Lukk",
   videos: [
     {
       id: "key-box",
