@@ -64,7 +64,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-cabin-dark text-slate-100 pb-16 flex flex-col font-sans select-none selection:bg-cabin-accent/20 selection:text-white">
+    <div className="min-h-screen bg-cabin-dark text-slate-100 pb-16 flex flex-col font-sans selection:bg-cabin-accent/20 selection:text-white">
       {/* Top Banner Language Switcher Header (Sticky) */}
       <header className="sticky top-0 z-50 bg-cabin-dark/85 backdrop-blur-md border-b border-white/8 px-4 sm:px-6 lg:px-8 py-3.5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
